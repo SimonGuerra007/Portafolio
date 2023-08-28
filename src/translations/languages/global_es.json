@@ -1,0 +1,20 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "aboutMe": "Sobre mí",
+        "proyects": "Proyectos",
+        "skills": "Habilidades",
+        "selectEnglish": "Inglés",
+        "selectSpanish": "Español"
+    },
+
+    "home": {
+        "title": "Desarrollador web full stack",
+        "seeMore": "Ver mas"
+    },
+
+    "aboutMe": {
+        "title": "Sobre mí",
+        "information": ""
+    }
+}

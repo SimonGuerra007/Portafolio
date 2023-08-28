@@ -1,0 +1,16 @@
+h3 {
+    font-family: 'Black Ops One', cursive;
+}
+
+h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
+}
+
+.section {
+    transition: transform 0.5s ease;
+}
+  

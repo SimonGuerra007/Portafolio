@@ -1,0 +1,20 @@
+{
+    "navbar": {
+        "home": "Home",
+        "aboutMe": "About me",
+        "proyects": "Proyects",
+        "skills": "Skills",
+        "selectEnglish": "English",
+        "selectSpanish": "Spanish"
+    },
+
+    "home": {
+        "title": "Full stack web developer",
+        "seeMore": "See more"
+    },
+
+    "aboutMe": {
+        "title": "About me",
+        "information": ""
+    }
+}
