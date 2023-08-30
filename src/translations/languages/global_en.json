@@ -14,7 +14,13 @@
     },
 
     "aboutMe": {
-        "title": "About me",
+        "title1": "A",
+        "title2": "B",
+        "title3": "O",
+        "title4": "U",
+        "title5": "T",
+        "title6": "M",
+        "title7": "E",
         "information": ""
     }
 }

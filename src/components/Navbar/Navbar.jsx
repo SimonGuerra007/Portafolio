@@ -12,26 +12,19 @@ const Navbar = ({ darkMode, setDarkMode, handleChangeLanguague, languague }) => 
 
 
   return (
-    <nav className={`flex justify-between items-center px-9 py-4 fixed top-0 z-[999] w-[100%] shadow-xl ${darkMode ? 'bg-[#171424] shadow-[#747474]' : 'bg-[#636363] shadow-[#000000]'}`}>
+    <nav className={`flex justify-between items-center px-9 py-3 fixed top-0 z-[999] w-[100%] shadow-lg ${darkMode ? 'bg-[#171424] shadow-[#747474]' : 'bg-[#4e555a] shadow-[#000000]'}`}>
       <h3 className="text-2xl cursor-pointer">Simon Guerra</h3>
       <ul className="flex gap-10 font-bold ">
-        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#494949]'}`}>{t("navbar.home")}</li>
-        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#494949]'}`}>{t("navbar.aboutMe")}</li>
-        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#494949]'}`}>{t("navbar.skills")}</li>
-        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#494949]'}`}>{t("navbar.proyects")}</li>
+        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#ffffff5f]'}`}>{t("navbar.home")}</li>
+        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#ffffff5f]'}`}>{t("navbar.aboutMe")}</li>
+        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#ffffff5f]'}`}>{t("navbar.skills")}</li>
+        <li className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${darkMode ? 'hover:bg-[#302b41]' : 'hover:bg-[#ffffff5f]'}`}>{t("navbar.proyects")}</li>
       </ul>
       <div className="flex justify-between items-center gap-3">
         <div className="flex items-center gap-2">
-          <div className="">
-            {languague === 'English' || languague === 'Spanish' ? (
-              <img className="w-[25px]" src="/public/images/spanish.png" alt="" />
-            ) : (
-              <img className="w-[20px]" src="/public/images/english.png" alt="" />
-            )}
-          </div>
           <select
             onChange={handleChangeLanguague}
-            className={`bg-inherit p-1 rounded-[5px] border-2 ${
+            className={`bg-inherit p-1 rounded-[5px] cursor-pointer border-2 ${
               darkMode ? "border-white text-white" : "border-black text-black"
             }`}
           >
@@ -55,7 +48,7 @@ const Navbar = ({ darkMode, setDarkMode, handleChangeLanguague, languague }) => 
           <div
             onClick={handleDarkMode}
             className={`${
-              darkMode ? "border-[#c2c2c2] hover:rotate-1" : "border-[#1d1d1d] hover:-rotate-12"
+              darkMode ? "border-[#c2c2c2] hover:rotate-1" : "border-[#1d1d1d] hover:-rotate-12 bg-white/50"
             } text-white cursor-pointer border-2 rounded-full p-1 transition-all ${rotateLogo ? 'rotate-180' : 'rotate-0'}`}
           >
             {darkMode ? (

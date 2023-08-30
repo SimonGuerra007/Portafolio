@@ -14,7 +14,13 @@
     },
 
     "aboutMe": {
-        "title": "Sobre mí",
+        "title1": "S",
+        "title2": "O",
+        "title3": "B",
+        "title4": "R",
+        "title5": "E",
+        "title6": "M",
+        "title7": "Í",
         "information": ""
     }
 }
