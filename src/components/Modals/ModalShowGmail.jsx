@@ -31,7 +31,7 @@ const ModalShowGmail = ({ darkMode, handleShowModalGmail, showModalGmail }) => {
                 ? "bg-[#1b1827] hover:bg-[#42304d] shadow-white"
                 : "bg-[#5c5c5c] hover:bg-[#414141] shadow-black"
             }`}
-            href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjDRdGMTFFFBnncHlzfPBtMjkMxtZxRrVDWBzkgDqFkWBMzBrvQmqHBXhbPMWkGqXsxzdC"
             target="blank"
           >
             ir a Gmail
