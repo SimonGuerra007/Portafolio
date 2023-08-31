@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Fade } from "react-awesome-reveal";
 import Navbar from "./components/Navbar/Navbar";
@@ -7,20 +7,37 @@ import AboutMe from "./components/ContentPage/AboutMe";
 import Skills from "./components/ContentPage/Skills";
 import Proyects from "./components/ContentPage/Proyects";
 import Contact from "./components/ContentPage/Contact";
-import Loading from "./components/Loader/Loading";
+import LoadingLang from "./components/Loader/LoadingLang";
+import LoadingGeneral from "./components/Loader/LoadingGeneral";
+import ModalFormGmail from "./components/Modals/ModalFormGmail";
+import { EMPTY_FORM_VALUES } from "./components/shared/constants";
+import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
-import ModalShowGmail from "./components/Modals/ModalShowGmail";
+import { useForm } from "react-hook-form";
+import ModalSuccessSend from "./components/Modals/ModalSuccessSend";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [languague, setLanguague] = useState("");
   const [showModalGmail, setShowModalGmail] = useState(false);
   const [loadingLang, setLoadingLang] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [userFormGmail, setUserFormGmail] = useState(null);
+  const [showModalSuccessEmail, setShowModalSuccessEmail] = useState(false);
   const { i18n } = useTranslation();
+
+  const {
+    reset,
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
 
   const handleShowModalGmail = () => {
     setShowModalGmail(!showModalGmail);
   };
+
+  console.log(userFormGmail);
 
   const handleChangeLanguague = (e) => {
     setLanguague(e.target.value);
@@ -42,6 +59,23 @@ function App() {
     }, 200);
   };
 
+  const sendEmail = () => {
+    emailjs.send("service_pz2jvva", "template_gagyctg", userFormGmail, '_vnGSaP0Lzhbg9U01').then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        reset(EMPTY_FORM_VALUES);
+        setShowModalGmail(false)
+      },
+      (err) => {
+        console.log("FAILED...", err);
+      }
+    );
+  };
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 700);
+
   return (
     <main
       className={`transition-all ${
@@ -60,13 +94,29 @@ function App() {
         handleShowModalGmail={handleShowModalGmail}
       />
 
-      <ModalShowGmail
+      <ModalFormGmail
         darkMode={darkMode}
         handleShowModalGmail={handleShowModalGmail}
         showModalGmail={showModalGmail}
+        userFormGmail={userFormGmail}
+        setUserFormGmail={setUserFormGmail}
+        sendEmail={sendEmail}
+        handleSubmit={handleSubmit}
+        register={register}
+        errors={errors}
+        setShowModalSuccessEmail={setShowModalSuccessEmail}
       />
 
-      <Loading loadingLang={loadingLang} darkMode={darkMode} />
+      <ModalSuccessSend
+        darkMode={darkMode}
+        sendEmail={sendEmail}
+        setShowModalSuccessEmail={setShowModalSuccessEmail}
+        showModalSuccessEmail={showModalSuccessEmail}
+      />
+
+      <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
+
+      <LoadingGeneral loading={loading} darkMode={darkMode} />
 
       <Fade className="overflow-hidden" direction="left">
         <Home darkMode={darkMode} />

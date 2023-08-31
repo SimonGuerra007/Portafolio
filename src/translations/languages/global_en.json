@@ -22,5 +22,19 @@
         "title6": "M",
         "title7": "E",
         "information": ""
+    },
+
+    "formEmail" : {
+        "name": "Este campo es requerido",
+        "placeHolderName": "Type your full name",
+        "message1": "Este campo es requerido",
+        "message2" : "Debe contener un maximo de 1000 caracteres",
+        "placeHolderMessage": "Type a message"
+    },
+
+    "modalSuccessSend": {
+        "title": "¿Are you sure you want to send this message?",
+        "confirm": "Confirm",
+        "cancel": "Cancel"
     }
 }
