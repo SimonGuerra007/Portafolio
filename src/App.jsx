@@ -109,6 +109,7 @@ function App() {
         showMain={showMain}
         handleChangeLanguague={handleChangeLanguague}
         handleDarkMode={handleDarkMode}
+        handleShowModalGmail={handleShowModalGmail}
       />
 
       <Contact

@@ -1,9 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const NavbarMovil = ({ darkMode, setShowMain, showMain, handleChangeLanguague, handleDarkMode, rotateLogo }) => {
-
-    const { t } = useTranslation()
+const NavbarMovil = ({
+  darkMode,
+  setShowMain,
+  showMain,
+  handleChangeLanguague,
+  handleDarkMode,
+  rotateLogo,
+  handleShowModalGmail
+}) => {
+  const { t } = useTranslation();
 
   const handleShowMain = () => {
     setShowMain(!showMain);
@@ -145,6 +152,41 @@ const NavbarMovil = ({ darkMode, setShowMain, showMain, handleChangeLanguague, h
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex flex-row justify-center items-center gap-6">
+            <div
+              onClick={handleShowModalGmail}
+              className="w-[50px] p-[5px] rounded-[15px] relative transition-all cursor-pointer bg-[#ffffff]"
+            >
+              <img src="/images/gmail.png" alt="" />
+            </div>
+            <a
+              href="https://www.linkedin.com/in/simon-guerra-02252626b/"
+              target="blank"
+              className="w-[50px] cursor-pointer"
+            >
+              <img
+                className="rounded-[15px]"
+                src="/images/linkedin.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://github.com/SimonGuerra007"
+              target="blank"
+              className={`w-[50px] p-[px] rounded-[15px] transition-all cursor-pointer bg-white ${
+                darkMode ? "" : "border-[4px] border-black"
+              } `}
+            >
+              <img src="/images/github.png" alt="" />
+            </a>
+            <a
+              href="https://www.instagram.com/simond_guerra_b/"
+              target="blank"
+              className="w-[50px] rounded-[18px] bg-white transition-all cursor-pointer"
+            >
+              <img src="/images/instagram.png" alt="" />
+            </a>
           </div>
         </div>
       </div>

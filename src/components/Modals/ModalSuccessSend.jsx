@@ -14,7 +14,7 @@ const ModalSuccessSend = ({ darkMode, sendEmail, setShowModalSuccessEmail, showM
   }
 
   return (
-    <div className={`h-screen w-full bg-black/60 flex justify-center items-center fixed z-[5000] ${showModalSuccessEmail ? 'visible' : 'invisible'} `}>
+    <div className={`h-screen w-full bg-black/60 flex justify-center items-center fixed z-[7500] ${showModalSuccessEmail ? 'visible' : 'invisible'} `}>
       <div
         className={`w-[100%] h-[50%] sm:w-[60%] sm:h-[50%] p-5 rounded-[20px] flex flex-col justify-center items-center gap-[30px] transition-all fixed ${showModalSuccessEmail ? 'top-[25%]' : 'top-[200%]'}  ${
           darkMode ? "bg-[#211d32] text-white" : "bg-[#aab9bd] text-black"

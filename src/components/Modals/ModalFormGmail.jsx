@@ -23,7 +23,7 @@ const ModalFormGmail = ({
 
   return (
     <div
-      className={`h-screen w-screen top-0 right-0 bg-black/80 fixed z-[2000] flex justify-center items-center transition-all ${
+      className={`h-screen w-screen top-0 right-0 bg-black/80 fixed z-[7000] flex justify-center items-center transition-all ${
         showModalGmail ? "visible" : "invisible"
       }`}
     >
