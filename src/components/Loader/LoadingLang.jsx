@@ -24,7 +24,7 @@ const LoadingLang = ({ loadingLang, darkMode }) => {
         </div>
       </div>
       <div
-        className={`h-[100%] w-[50%] fixed top-0 right-0 z-[3000] transition-all bg-[#ffbf00] ${
+        className={`h-[100%] w-[50%] fixed top-0 right-0 z-[5500] transition-all bg-[#ffbf00] ${
           loadingLang ? "right-0" : "right-[-200%]"
         }`}
       ></div>
