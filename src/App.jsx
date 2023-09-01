@@ -92,7 +92,7 @@ function App() {
   return (
     <main
       className={`transition-all ${
-        darkMode ? "bg-[#211d32] text-white" : "bg-[#aab9bd] text-black"
+        darkMode ? "bg-[#121212] text-white" : "bg-[#818181] text-black"
       }`}
     >
       <Navbar

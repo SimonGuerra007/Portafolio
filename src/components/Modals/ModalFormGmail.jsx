@@ -34,12 +34,14 @@ const ModalFormGmail = ({
       >
         <div
           className={`hover:transform-cpu transition-all w-[100%] h-[100%] sm:w-[600px] sm:h-[90%] relative rounded-none sm:rounded-[20px] flex flex-col justify-center items-center gap-5 ${
-            darkMode ? "bg-[#211d32] text-white" : "bg-[#aab9bd] text-black"
+            darkMode
+            ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
+            : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
           }`}
         >
           <span
             onClick={handleShowModalGmail}
-            className={`font-bold rounded-full py-1 px-[10px] cursor-pointer absolute top-2 right-2 ${
+            className={`rounded-full py-1 px-[10px] cursor-pointer absolute top-2 right-2 ${
               darkMode ? "bg-[#c7c7c7] text-black" : "bg-[#202020] text-white"
             }`}
           >
@@ -56,8 +58,8 @@ const ModalFormGmail = ({
               <input
                 className={`px-4 py-2 rounded-full w-[250px] sm:w-[350px] ${
                   darkMode
-                    ? "placeholder:font-semibold placeholder:text-[#42347d] bg-[#161320]"
-                    : ""
+                  ? "bg-[#454545]"
+                  : "bg-[#323232] text-white"
                 }`}
                 type="text"
                 name="name"
@@ -78,8 +80,8 @@ const ModalFormGmail = ({
               <input
                 className={`px-4 py-2 rounded-[15px] resize-none overflow-y-auto box-border flex flex-col flex-wrap w-[250px] h-[200px] sm:w-[350px] ${
                   darkMode
-                    ? "placeholder:font-semibold placeholder:text-[#42347d] bg-[#161320]"
-                    : ""
+                  ? "bg-[#454545]"
+                  : "bg-[#323232] text-white"
                 }`}
                 type="text"
                 name="message"
@@ -101,10 +103,10 @@ const ModalFormGmail = ({
               </p>
             </div>
             <button
-              className={`w-[100px] py-2 shadow-md rounded-[5px] font-semibold transition-all ${
+              className={`w-[150px] py-2 shadow-md rounded-full font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
                 darkMode
-                  ? "bg-[#1b1827] hover:bg-[#42304d] shadow-white"
-                  : "bg-[#4e555a] hover:bg-[#2d3639] shadow-black"
+                  ? "shadow-white"
+                  : "shadow-black"
               }`}
             >
               Enviar

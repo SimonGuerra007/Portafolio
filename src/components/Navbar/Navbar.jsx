@@ -7,38 +7,38 @@ const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo })
   return (
     <div>
       <nav
-        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] shadow-lg ${
+        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] ${
           darkMode
-            ? "bg-[#171424] shadow-[#747474]"
-            : "bg-[#4e555a] shadow-[#000000]"
+            ? "bg-gradient-to-r from-[#151515] to-[#484848]"
+            : "bg-gradient-to-r from-[#7b7b7b] to-[#3f3f3f]"
         }`}
       >
-        <h3 className="text-2xl cursor-pointer">Simon Guerra</h3>
+        <h3 className={`text-2xl cursor-pointer font-bold transition-all text-[#ffc400] ${darkMode ? 'hover:text-[#ffecc5]' : 'hover:text-[#674400]'}`}>Simon Guerra.</h3>
         <ul className="flex gap-3 lg:gap-10 font-bold ">
           <li
             className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:bg-[#302b41]" : "hover:bg-[#ffffff5f]"
+              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
             }`}
           >
             {t("navbar.home")}
           </li>
           <li
             className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:bg-[#302b41]" : "hover:bg-[#ffffff5f]"
+              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
             }`}
           >
             {t("navbar.aboutMe")}
           </li>
           <li
             className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:bg-[#302b41]" : "hover:bg-[#ffffff5f]"
+              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
             }`}
           >
             {t("navbar.skills")}
           </li>
           <li
             className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:bg-[#302b41]" : "hover:bg-[#ffffff5f]"
+              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
             }`}
           >
             {t("navbar.proyects")}
@@ -49,19 +49,19 @@ const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo })
             <select
               onChange={handleChangeLanguague}
               className={`bg-inherit p-1 rounded-[5px] cursor-pointer border-2 ${
-                darkMode ? "border-white text-white" : "border-black text-black"
+                darkMode ? "border-[#ffb92c] text-[#ffb92c]" : "border-[#000000] text-[#000000] bg-[#ffb92c]"
               }`}
             >
               <option
                 className={`w-[25px] transition-all ${
-                  darkMode ? "bg-[#121424f3]" : "bg-[#636363]"
+                  darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
                 } `}
               >
                 {t("navbar.selectEnglish")}
               </option>
               <option
-                className={`w-[25px] transition-all ${
-                  darkMode ? "bg-[#121424f3]" : "bg-[#636363]"
+                className={`w-[25px] transition-all text-black ${
+                  darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
                 } `}
               >
                 {t("navbar.selectSpanish")}
@@ -73,8 +73,8 @@ const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo })
               onClick={handleDarkMode}
               className={`${
                 darkMode
-                  ? "border-[#c2c2c2] hover:rotate-1"
-                  : "border-[#1d1d1d] hover:-rotate-12 bg-white/50"
+                  ? "border-[#ffb92c] hover:rotate-1 text-[#ffb92c]"
+                  : "border-[#1d1d1d] hover:-rotate-12 bg-[#ffb92c]"
               } text-white cursor-pointer border-2 rounded-full p-1 transition-all  ${
                 rotateLogo ? "rotate-180" : "rotate-0"
               }`}
