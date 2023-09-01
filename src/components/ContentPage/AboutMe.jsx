@@ -7,7 +7,7 @@ const AboutMe = ({ darkMode }) => {
   return (
     <div className="h-[100vh] w-[90%] md:w-[75%] m-auto flex md:flex-row flex-col items-center justify-center gap-[30px]">
       <div
-        className={`font-bold text-[40px] w-[90%] md:w-[10%] py-5 px-[50px] rounded-full flex md:flex-col flex-row gap-[30px] md:rounded-[10px] shadow-lg ${
+        className={`font-bold text-[20px] sm:text-[40px] w-[90%] md:w-[10%] py-5 px-[50px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-[10px] shadow-lg ${
           darkMode
             ? "bg-[#171424] shadow-[#747474]"
             : "bg-[#4e555a] shadow-[#000000]"
@@ -27,7 +27,7 @@ const AboutMe = ({ darkMode }) => {
       </div>
 
       <p
-        className={`text-2xl w-[90%] rounded-[20px] p-5 shadow-lg ${
+        className={`text-2xl w-[90%] h-[350px] sm:h-[500px] overflow-auto sm:overflow-hidden rounded-[20px] p-5 shadow-lg ${
           darkMode
             ? "bg-[#171424] shadow-[#747474]"
             : "bg-[#4e555a] shadow-[#000000]"

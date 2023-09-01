@@ -10,6 +10,7 @@ import Contact from "./components/ContentPage/Contact";
 import LoadingLang from "./components/Loader/LoadingLang";
 import LoadingGeneral from "./components/Loader/LoadingGeneral";
 import ModalFormGmail from "./components/Modals/ModalFormGmail";
+import NavbarMovil from "./components/Navbar/NavbarMovil";
 import { EMPTY_FORM_VALUES } from "./components/shared/constants";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
@@ -24,6 +25,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [userFormGmail, setUserFormGmail] = useState(null);
   const [showModalSuccessEmail, setShowModalSuccessEmail] = useState(false);
+  const [showMain, setShowMain] = useState(false);
+  const [rotateLogo, setRotateLogo] = useState(false);
   const { i18n } = useTranslation();
 
   const {
@@ -37,7 +40,10 @@ function App() {
     setShowModalGmail(!showModalGmail);
   };
 
-  console.log(userFormGmail);
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+    setRotateLogo(!rotateLogo);
+  };
 
   const handleChangeLanguague = (e) => {
     setLanguague(e.target.value);
@@ -60,16 +66,23 @@ function App() {
   };
 
   const sendEmail = () => {
-    emailjs.send("service_pz2jvva", "template_gagyctg", userFormGmail, '_vnGSaP0Lzhbg9U01').then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        reset(EMPTY_FORM_VALUES);
-        setShowModalGmail(false)
-      },
-      (err) => {
-        console.log("FAILED...", err);
-      }
-    );
+    emailjs
+      .send(
+        "service_pz2jvva",
+        "template_gagyctg",
+        userFormGmail,
+        "_vnGSaP0Lzhbg9U01"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          reset(EMPTY_FORM_VALUES);
+          setShowModalGmail(false);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   setTimeout(() => {
@@ -87,6 +100,15 @@ function App() {
         setDarkMode={setDarkMode}
         handleChangeLanguague={handleChangeLanguague}
         languague={languague}
+        handleDarkMode={handleDarkMode}
+      />
+
+      <NavbarMovil
+        darkMode={darkMode}
+        setShowMain={setShowMain}
+        showMain={showMain}
+        handleChangeLanguague={handleChangeLanguague}
+        handleDarkMode={handleDarkMode}
       />
 
       <Contact
