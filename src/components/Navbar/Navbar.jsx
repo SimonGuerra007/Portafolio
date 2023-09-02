@@ -1,55 +1,97 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
-const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo }) => {
+const Navbar = ({
+  darkMode,
+  handleChangeLanguague,
+  handleDarkMode,
+  rotateLogo,
+}) => {
   const { t } = useTranslation();
 
   return (
     <div>
       <nav
-        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] ${
+        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] shadow-lg shadow-black ${
           darkMode
-            ? "bg-gradient-to-r from-[#151515] to-[#484848]"
+            ? "bg-gradient-to-r from-[#0b0b0b] to-[#2b2b2b]"
             : "bg-gradient-to-r from-[#7b7b7b] to-[#3f3f3f]"
         }`}
       >
-        <h3 className={`text-2xl cursor-pointer font-bold transition-all text-[#ffc400] ${darkMode ? 'hover:text-[#ffecc5]' : 'hover:text-[#674400]'}`}>Simon Guerra.</h3>
+        <Link to="Home" spy={true} smooth={true} duration={500} offset={-50}>
+          <h3
+            className={`text-2xl cursor-pointer font-bold transition-all text-[#ffc400] ${
+              darkMode ? "hover:text-[#ffecc5]" : "hover:text-[#674400]"
+            }`}
+          >
+            Simon Guerra.
+          </h3>
+        </Link>
         <ul className="flex gap-3 lg:gap-10 font-bold ">
-          <li
-            className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
-            }`}
+          <Link to="Home" spy={true} smooth={true} duration={500} offset={-50}>
+            <li
+              className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+              }`}
+            >
+              {t("navbar.home")}
+            </li>
+          </Link>
+          <Link
+            to="AboutMe"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
           >
-            {t("navbar.home")}
-          </li>
-          <li
-            className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
-            }`}
+            <li
+              className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+              }`}
+            >
+              {t("navbar.aboutMe")}
+            </li>
+          </Link>
+          <Link
+            to="Skills"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
           >
-            {t("navbar.aboutMe")}
-          </li>
-          <li
-            className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
-            }`}
+            <li
+              className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+              }`}
+            >
+              {t("navbar.skills")}
+            </li>
+          </Link>
+          <Link
+            to="Proyects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
           >
-            {t("navbar.skills")}
-          </li>
-          <li
-            className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-              darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
-            }`}
-          >
-            {t("navbar.proyects")}
-          </li>
+            <li
+              className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+              }`}
+            >
+              {t("navbar.proyects")}
+            </li>
+          </Link>
         </ul>
         <div className="flex justify-between items-center gap-3">
           <div className="flex items-center gap-2">
             <select
               onChange={handleChangeLanguague}
               className={`bg-inherit p-1 rounded-[5px] cursor-pointer border-2 ${
-                darkMode ? "border-[#ffb92c] text-[#ffb92c]" : "border-[#000000] text-[#000000] bg-[#ffb92c]"
+                darkMode
+                  ? "border-[#ffb92c] text-[#ffb92c]"
+                  : "border-[#000000] text-[#000000] bg-[#ffb92c]"
               }`}
             >
               <option
@@ -73,7 +115,7 @@ const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo })
               onClick={handleDarkMode}
               className={`${
                 darkMode
-                  ? "border-[#ffb92c] hover:rotate-1 text-[#ffb92c]"
+                  ? "border-[#ffb92c] hover:rotate-1"
                   : "border-[#1d1d1d] hover:-rotate-12 bg-[#ffb92c]"
               } text-white cursor-pointer border-2 rounded-full p-1 transition-all  ${
                 rotateLogo ? "rotate-180" : "rotate-0"
@@ -86,7 +128,7 @@ const Navbar = ({ darkMode, handleChangeLanguague, handleDarkMode, rotateLogo })
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6 transition-all hover:animate-spin"
+                  className="w-6 h-6 transition-all hover:animate-spin text-[#ffb92c]"
                 >
                   <path
                     strokeLinecap="round"

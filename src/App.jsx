@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Fade } from "react-awesome-reveal";
+
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/ContentPage/Home";
 import AboutMe from "./components/ContentPage/AboutMe";
@@ -11,11 +11,15 @@ import LoadingLang from "./components/Loader/LoadingLang";
 import LoadingGeneral from "./components/Loader/LoadingGeneral";
 import ModalFormGmail from "./components/Modals/ModalFormGmail";
 import NavbarMovil from "./components/Navbar/NavbarMovil";
+import ModalSuccessSend from "./components/Modals/ModalSuccessSend";
+
 import { EMPTY_FORM_VALUES } from "./components/shared/constants";
+
+import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import ModalSuccessSend from "./components/Modals/ModalSuccessSend";
+import { Element } from "react-scroll";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -141,11 +145,19 @@ function App() {
 
       <LoadingGeneral loading={loading} darkMode={darkMode} />
 
-      <Fade className="overflow-hidden" direction="left">
-        <Home darkMode={darkMode} />
-        <AboutMe darkMode={darkMode} />
-        <Skills darkMode={darkMode} />
-        <Proyects darkMode={darkMode} />
+      <Fade direction="left">
+        <Element name="Home">
+          <Home darkMode={darkMode} />
+        </Element>
+        <Element name="AboutMe">
+          <AboutMe darkMode={darkMode} />
+        </Element>
+        <Element name="Skills">
+          <Skills darkMode={darkMode} />
+        </Element>
+        <Element name="Proyects">
+          <Proyects darkMode={darkMode} />
+        </Element>
       </Fade>
     </main>
   );

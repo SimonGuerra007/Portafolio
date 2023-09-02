@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Contact from "./Contact";
+import { Link } from "react-scroll";
 
 const Home = ({ darkMode }) => {
   const { t } = useTranslation();
@@ -27,19 +28,17 @@ const Home = ({ darkMode }) => {
               {t("home.title2")}
             </h4>
           </div>
-          <button
-            className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold bg-[#cf9013] hover:bg-[#ffb218] ${
-              darkMode
-                ? " shadow-[#747474] "
-                : "shadow-[#000000]"
-            }`}
-          >
-            {t("home.seeMore")}
-          </button>
+          <Link to="AboutMe" spy={true} smooth={true} duration={500} offset={-50}>
+            <button
+              className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold bg-[#cf9013] hover:bg-[#ffb218] shadow-black`}
+            >
+              {t("home.seeMore")}
+            </button>
+          </Link>
         </div>
         <div className="relative">
           <div
-            className={`w-[300px] md:w-[430px] lg:w-[500px] absolute bottom-[-150px] right-[-160px] md:bottom-[-350px] md:right-[-280px]`}
+            className={`w-[300px] md:w-[430px] lg:w-[500px] absolute z-[10] bottom-[-150px] right-[-160px] md:bottom-[-350px] md:right-[-280px]`}
           >
             {darkMode ? (
               <img src="/images/PhotoPortafolioDark.png" alt="" />

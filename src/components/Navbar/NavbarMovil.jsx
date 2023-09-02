@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 const NavbarMovil = ({
   darkMode,
@@ -40,12 +41,12 @@ const NavbarMovil = ({
         />
       </svg>
       <div
-        className={`fixed h-[100%] w-[100%] top-0 z-[5000] bg-white/30 md:invisible ${
+        className={`fixed h-[100%] w-[100%] top-0 z-[5000] md:invisible ${
           showMain ? "visible" : "invisible"
         } `}
       >
         <div
-          className={`h-[100%] w-screen sm:w-[70%] md:invisible flex flex-col fixed top-0 p-3 transition-all ${
+          className={`h-[100%] w-screen md:invisible flex flex-col fixed top-0 p-3 transition-all ${
             darkMode
               ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
               : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
@@ -58,36 +59,74 @@ const NavbarMovil = ({
             {t("navbar.close")}
           </p>
           <div className="flex flex-col gap-[50px] p-[20px]">
-            <h3 className="text-2xl cursor-pointer font-bold text-[#ffb92c]">Simon Guerra</h3>
+            <h3 className="text-2xl cursor-pointer font-bold text-[#ffb92c]">
+              Simon Guerra
+            </h3>
             <ul className="flex flex-col gap-3 lg:gap-10 font-bold ">
-              <li
-                className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                  darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
-                }`}
+              <Link
+                onClick={handleShowMain}
+                to="Home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
               >
-                {t("navbar.home")}
-              </li>
-              <li
-                className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                  darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
-                }`}
+                <li
+                  className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                    darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
+                  }`}
+                >
+                  {t("navbar.home")}
+                </li>
+              </Link>
+              <Link
+                onClick={handleShowMain}
+                to="AboutMe"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
               >
-                {t("navbar.aboutMe")}
-              </li>
-              <li
-                className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                  darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
-                }`}
+                <li
+                  className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                    darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
+                  }`}
+                >
+                  {t("navbar.aboutMe")}
+                </li>
+              </Link>
+              <Link
+                onClick={handleShowMain}
+                to="Skills"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
               >
-                {t("navbar.skills")}
-              </li>
-              <li
-                className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                  darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
-                }`}
+                <li
+                  className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                    darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
+                  }`}
+                >
+                  {t("navbar.skills")}
+                </li>
+              </Link>
+              <Link
+                onClick={handleShowMain}
+                to="Proyects"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
               >
-                {t("navbar.proyects")}
-              </li>
+                <li
+                  className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
+                    darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
+                  }`}
+                >
+                  {t("navbar.proyects")}
+                </li>
+              </Link>
             </ul>
             <div className="flex flex-col items-end gap-3 px-[50px]">
               <div className="flex items-center gap-2">
@@ -133,7 +172,7 @@ const NavbarMovil = ({
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="h-[35px] w-[35px] transition-all hover:animate-spin"
+                      className="h-[35px] w-[35px] transition-all hover:animate-spin text-[#ffb92c]"
                     >
                       <path
                         strokeLinecap="round"
@@ -148,7 +187,7 @@ const NavbarMovil = ({
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-[30px] h-[30px] text-black hover:animate-spin"
+                      className="w-[30px] h-[30px] transition-all text-black hover:animate-spin"
                     >
                       <path
                         strokeLinecap="round"

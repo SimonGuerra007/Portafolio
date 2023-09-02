@@ -1,52 +1,62 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "../styles/aboutMe.css"
+import "../styles/aboutMe.css";
+import { Link } from "react-scroll";
 
 const AboutMe = ({ darkMode }) => {
   const { t } = useTranslation();
   return (
-    <div className="h-[100vh] w-[90%] md:w-[75%] m-auto flex md:flex-row flex-col items-center justify-center gap-[30px]">
-      <div
-        className={`font-bold text-[20px] sm:text-[40px] w-[90%] md:w-[10%] py-5 px-[50px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-[10px] shadow-lg ${
-          darkMode
-            ? "bg-[#171424] shadow-[#747474]"
-            : "bg-[#4e555a] shadow-[#000000]"
-        } `}
-      >
-        <div className="md:flex flex-col items-center pr-2 md:pr-0">
-          <span>{t("aboutMe.title1")}</span>
-          <span>{t("aboutMe.title2")}</span>
-          <span>{t("aboutMe.title3")}</span>
-          <span>{t("aboutMe.title4")}</span>
-          <span>{t("aboutMe.title5")}</span>
+    <div
+      className={`h-[100vh] w-[100%] md:w-[100%] overflow-hidden flex justify-center items-center  ${
+        darkMode
+          ? "bg-gradient-to-r from-[#161616] to-[#292929]"
+          : "bg-gradient-to-r from-[#383838] to-[#929292]"
+      } `}
+    >
+      <div className="w-[80%] h-[80%] m-auto flex md:flex-row flex-col items-center justify-center gap-[30px]">
+        <div
+          className={`font-bold text-[20px] text-center sm:text-[40px] max:w-[50px] py-2 px-[30px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-full shadow-lg ${
+            darkMode
+              ? "bg-[#141414] shadow-[#747474]"
+              : "bg-[#4e555a] shadow-[#000000]"
+          } `}
+        >
+          <div className="w-[100%] flex md:flex-col justify-center items-center px-2 md:px-0">
+            <span>{t("aboutMe.title1")}</span>
+            <span>{t("aboutMe.title2")}</span>
+            <span>{t("aboutMe.title3")}</span>
+            <span>{t("aboutMe.title4")}</span>
+            <span>{t("aboutMe.title5")}</span>
+          </div>
+          <div className="md:flex md:flex-col items-center pr-2 md:pr-0">
+            <span>{t("aboutMe.title6")}</span>
+            <span>{t("aboutMe.title7")}</span>
+          </div>
         </div>
-        <div className="md:flex md:flex-col items-center pr-2 md:pr-0">
-          <span>{t("aboutMe.title6")}</span>
-          <span>{t("aboutMe.title7")}</span>
+
+        <div className="h-[80%] w-[100%] flex flex-col justify-center items-center gap-4">
+          <h3
+            className={`text-xl sm:text-3xl text-center font-bold w-[90%] max-h-[100px] rounded-[20px] p-2 shadow-md ${
+              darkMode
+                ? "bg-[#141414] shadow-[#747474]"
+                : "bg-[#4e555a] shadow-[#000000]"
+            }`}
+          >
+            Simon David Guerra Bedoya
+          </h3>
+          <div
+            className={`sm:text-xl w-[90%] h-[350px] md:h-[400px] overflow-auto rounded-[20px] p-5 shadow-md flex flex-col gap-3 ${
+              darkMode
+                ? "bg-[#141414] shadow-[#747474]"
+                : "bg-[#4e555a] shadow-[#000000]"
+            }`}
+          >
+            <p>{t("aboutMe.information")}</p>
+            <p>{t("aboutMe.information2")}</p>
+            <p>{t("aboutMe.information3")}</p>
+          </div>
         </div>
       </div>
-
-      <p
-        className={`text-2xl w-[90%] h-[350px] sm:h-[500px] overflow-auto sm:overflow-hidden rounded-[20px] p-5 shadow-lg ${
-          darkMode
-            ? "bg-[#171424] shadow-[#747474]"
-            : "bg-[#4e555a] shadow-[#000000]"
-        }`}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ea!
-        Consequatur aut, nisi natus nesciunt officiis ipsam enim repellendus
-        maxime suscipit? Ex id at quo, in ipsa iusto repellat facere. Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Excepturi a nesciunt
-        architecto accusantium dignissimos voluptates distinctio ratione quam
-        sapiente, commodi in placeat nobis laudantium sint ipsam blanditiis
-        provident cum porro. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Ipsum consequuntur, tempore hic, cupiditate ut, quos modi aperiam
-        porro in repudiandae optio repellendus magni dignissimos fuga inventore
-        qui ipsam voluptatem voluptate? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Laboriosam ipsum at adipisci esse reprehenderit iure
-        consectetur unde inventore recusandae dignissimos voluptatum dicta
-        doloribus quos ullam, sunt culpa ut nam. Similique?
-      </p>
     </div>
   );
 };
