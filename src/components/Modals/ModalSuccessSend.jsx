@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const ModalSuccessSend = ({ darkMode, sendEmail, setShowModalSuccessEmail, showModalSuccessEmail }) => {
+const ModalSuccessSend = ({ darkMode, sendEmail, setShowModalSuccessEmail, showModalSuccessEmail, setModalSending }) => {
   const { t } = useTranslation();
 
   const handleSubmitEmail = () => {
     sendEmail();
     setShowModalSuccessEmail(false)
+    setModalSending(true)
   };
 
   const handleCloseModalSuccess = () => {

@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/skills.css";
+import { useTranslation } from "react-i18next";
 
 const Skills = ({ darkMode }) => {
+  const { t } = useTranslation()
   return (
     <div
       className={`h-[100vh] flex flex-col justify-center items-center gap-[50px] ${
@@ -11,13 +13,13 @@ const Skills = ({ darkMode }) => {
       } `}
     >
       <h2
-        className={`w-[40%] text-center text-[25px] md:text-[50px]  font-bold p-[5px] rounded-full shadow-md ${
+        className={`text-center text-[25px] md:text-[50px]  font-bold px-[15px] py-[5px] rounded-full shadow-md ${
           darkMode
             ? "bg-[#0f0f0f] shadow-[#747474]"
             : "bg-[#b6b6b6] shadow-[#000000]"
         } `}
       >
-        Skills
+        {t("skills.title")}
       </h2>
       <div
         className={`w-[60%] text-center md:text-[20px] font-bold p-[10px] rounded-[20px] shadow-md flex flex-col justify-around ${

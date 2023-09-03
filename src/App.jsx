@@ -26,6 +26,8 @@ import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { Element } from "react-scroll";
+import ModalSending from "./components/Modals/ModalSending";
+import SendingSuccess from "./components/Modals/SendingSuccess";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -37,6 +39,9 @@ function App() {
   const [showModalSuccessEmail, setShowModalSuccessEmail] = useState(false);
   const [showMain, setShowMain] = useState(false);
   const [rotateLogo, setRotateLogo] = useState(false);
+  const [modalSending, setModalSending] = useState(false)
+  const [sendingSuccess, setSendingSuccess] = useState(false)
+
   const { i18n } = useTranslation();
 
   const {
@@ -88,6 +93,11 @@ function App() {
           console.log("SUCCESS!", response.status, response.text);
           reset(EMPTY_FORM_VALUES);
           setShowModalGmail(false);
+          setModalSending(false)
+          setSendingSuccess(true)
+          setTimeout(() => {
+            setSendingSuccess(false)
+          }, 3000)
         },
         (err) => {
           console.log("FAILED...", err);
@@ -101,7 +111,7 @@ function App() {
 
   return (
     <main
-      className={`transition-all ${
+      className={`transition-all overflow-hidden  ${
         darkMode ? "bg-[#121212] text-white" : "bg-[#818181] text-black"
       }`}
     >
@@ -145,7 +155,12 @@ function App() {
         sendEmail={sendEmail}
         setShowModalSuccessEmail={setShowModalSuccessEmail}
         showModalSuccessEmail={showModalSuccessEmail}
+        setModalSending={setModalSending}
       />
+
+      <ModalSending darkMode={darkMode} modalSending={modalSending} />
+
+      <SendingSuccess sendingSuccess={sendingSuccess} />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
 

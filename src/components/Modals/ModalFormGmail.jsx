@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const ModalFormGmail = ({
@@ -77,7 +78,10 @@ const ModalFormGmail = ({
               </p>
             </div>
             <div>
-              <input
+              <textarea
+                rows=""
+                cols=""
+              
                 className={`px-4 py-2 rounded-[15px] resize-none overflow-y-auto box-border flex flex-col flex-wrap w-[250px] h-[200px] sm:w-[350px] ${
                   darkMode
                   ? "bg-[#454545]"
@@ -98,7 +102,8 @@ const ModalFormGmail = ({
                   },
                 })}
               />
-              <p className="text-xs text-[#ff0000] font-bold">
+              <p
+               className="text-xs text-[#ff0000] font-bold">
                 {errors.message?.message}
               </p>
             </div>

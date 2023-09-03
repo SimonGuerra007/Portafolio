@@ -28,6 +28,16 @@
         "information3": "Si dezconosco información util y necesaria para el proyecto, investigo de fuentes confiables para realizar un buen desarrollo y buenas practicas en mi espacio de trabajo"
     },
 
+    "skills": {
+        "title": "Habilidades"
+    },
+
+    "projects": {
+        "title": "Proyectos",
+        "seeWeb": "Pagina web",
+        "seeRepository": "Repositorio"
+    },
+
     "formEmail" : {
         "name": "Este campo es requerido",
         "placeHolderName": "Escribe tu nombre completo",
@@ -40,5 +50,13 @@
         "title": "¿Estás seguro de que quieres enviar este mensaje?",
         "confirm": "Confirmar",
         "cancel": "Cancelar"
+    },
+
+    "modalSending": {
+        "title": "Enviando mensaje..."
+    },
+
+    "sendingSuccess": {
+        "title": "Enviado correctamente"
     }
 }

@@ -28,6 +28,16 @@
         "information3": "If I don't know necesary information, I investigate from reliable sources to carry out a good development and good practices in my workspace"
     },
 
+    "skills": {
+        "title": "Skills"
+    },
+
+    "projects": {
+        "title": "Projects",
+        "seeWeb": "Web page",
+        "seeRepository": "Repository"
+    },
+
     "formEmail" : {
         "name": "Este campo es requerido",
         "placeHolderName": "Type your full name",
@@ -40,5 +50,13 @@
         "title": "¿Are you sure you want to send this message?",
         "confirm": "Confirm",
         "cancel": "Cancel"
+    },
+    
+    "modalSending": {
+        "title": "Sending message..."
+    },
+
+    "sendingSuccess": {
+        "title": "Submitted successfully"
     }
 }
