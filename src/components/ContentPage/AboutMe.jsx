@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "../styles/aboutMe.css";
-import { Link } from "react-scroll";
 
 const AboutMe = ({ darkMode }) => {
   const { t } = useTranslation();
@@ -17,7 +16,7 @@ const AboutMe = ({ darkMode }) => {
         <div
           className={`font-bold text-[20px] text-center sm:text-[40px] max:w-[50px] py-2 px-[30px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-full shadow-lg ${
             darkMode
-              ? "bg-[#141414] shadow-[#747474]"
+              ? "bg-[#0f0f0f] shadow-[#747474]"
               : "bg-[#b6b6b6] shadow-[#000000]"
           } `}
         >
@@ -38,7 +37,7 @@ const AboutMe = ({ darkMode }) => {
           <h3
             className={`text-xl sm:text-3xl text-center font-bold w-[90%] max-h-[100px] rounded-[20px] p-2 shadow-md ${
               darkMode
-                ? "bg-[#141414] shadow-[#747474]"
+                ? "bg-[#0f0f0f] shadow-[#747474]"
                 : "bg-[#b6b6b6] shadow-[#000000]"
             }`}
           >
@@ -47,18 +46,22 @@ const AboutMe = ({ darkMode }) => {
           <div
             className={`sm:text-xl w-[90%] h-[350px] md:h-[400px] overflow-auto rounded-l-[20px] rounded-r-[5px] p-5 shadow-md flex flex-col gap-3 ${
               darkMode
-                ? "bg-[#141414] shadow-[#747474]"
+                ? "bg-[#0f0f0f] shadow-[#747474]"
                 : "bg-[#b6b6b6] shadow-[#000000]"
             }`}
           >
             <div className="flex lg:flex-row flex-col-reverse justify-center items-center decoration-red-700">
               <p className="lg:w-[65%]">{t("aboutMe.information")}</p>
               <div className="lg:w-[35%] relative">
-                <img
-                  className={`rounded-full h-[200px] w-[200px] border-[4px] border-black ${darkMode ? 'border-white' : 'border-black'}`}
-                  src="/images/PhotoPortafolio.png"
+                {darkMode ? <img
+                  className={`rounded-full h-[200px] w-[200px] border-[4px] border-[#ffb92c]`}
+                  src="/images/PhotoPortafolioDark.png"
                   alt=""
-                />
+                /> : <img
+                className={`rounded-full h-[200px] w-[200px] border-[4px] border-black`}
+                src="/images/PhotoPortafolio.png"
+                alt=""
+              />}
               </div>
             </div>
             <p>{t("aboutMe.information2")}</p>

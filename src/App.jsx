@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
+
+// ! COMPONENTS
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/ContentPage/Home";
@@ -13,7 +15,11 @@ import ModalFormGmail from "./components/Modals/ModalFormGmail";
 import NavbarMovil from "./components/Navbar/NavbarMovil";
 import ModalSuccessSend from "./components/Modals/ModalSuccessSend";
 
+// TODO: SHARED
+
 import { EMPTY_FORM_VALUES } from "./components/shared/constants";
+
+// ? LIBRARY
 
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
