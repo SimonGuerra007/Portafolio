@@ -58,7 +58,7 @@ const NavbarMovil = ({
           >
             {t("navbar.close")}
           </p>
-          <div className="flex flex-col gap-[50px] p-[20px]">
+          <div onClick={handleShowMain} className="flex flex-col gap-[50px] p-[20px]">
             <h3 className="text-2xl cursor-pointer font-bold text-[#ffb92c]">
               Simon Guerra
             </h3>

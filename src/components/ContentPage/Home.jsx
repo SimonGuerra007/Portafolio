@@ -8,14 +8,14 @@ const Home = ({ darkMode }) => {
 
   return (
     <div
-      className={`${
+      className={`select-none ${
         darkMode
           ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
           : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
       } `}
     >
-      <div className="h-[94vh] sm:h-[93vh] w-[80%] md:w-[70%] m-auto flex flex-col md:flex-row justify-around items-center ">
-        <div className="flex flex-col justify-center gap-[30px] mb-[40px] sm:mb-[100px]">
+      <div className="h-[94vh] md:h-[93vh] w-[80%] md:w-[70%] m-auto flex flex-col md:flex-row justify-around items-center ">
+        <div className="flex flex-col justify-center gap-[30px] sm:pb-[10px]">
           <div>
             <h4 className="font-semibold text-[10px] sm:text-[20px]">
               {t("home.title1")}
@@ -36,14 +36,14 @@ const Home = ({ darkMode }) => {
             </button>
           </Link>
         </div>
-        <div className="relative">
+        <div className="w-[80%] sm:w-[40%] pt-[20px] bg-[#cf9013] rounded-t-[15px] md:rounded-none">
           <div
-            className={`w-[300px] md:w-[430px] lg:w-[500px] absolute z-[10] bottom-[-150px] right-[-160px] md:bottom-[-350px] md:right-[-280px]`}
+            className={`w-[300px] md:w-[430px] lg:w-[500px]`}
           >
             {darkMode ? (
-              <img src="/images/PhotoPortafolioDark.png" alt="" />
+              <img src="/images/Photo2_PortafolioDark.png" alt="" />
             ) : (
-              <img src="/images/PhotoPortafolio.png" alt="" />
+              <img src="/images/Photo2_Portafolio.png" alt="" />
             )}
           </div>
         </div>
