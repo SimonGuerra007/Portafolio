@@ -41,8 +41,10 @@
     "formEmail" : {
         "name": "Este campo es requerido",
         "placeHolderName": "Escribe tu nombre completo",
+        "email": "Este campo es requerido",
+        "email2": "Debe contener el caracter @",
+        "placeHolderEmail": "Escribe tu correo",
         "message1": "Este campo es requerido",
-        "message2" : "Debe contener un maximo de 1000 caracteres",
         "placeHolderMessage": "Escribe un mensaje"
     },
 

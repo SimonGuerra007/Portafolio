@@ -78,6 +78,32 @@ const ModalFormGmail = ({
               </p>
             </div>
             <div>
+              <input
+                className={`px-4 py-2 rounded-full w-[250px] sm:w-[350px] ${
+                  darkMode
+                  ? "bg-[#454545]"
+                  : "bg-[#323232] text-white"
+                }`}
+                type="email"
+                name="email"
+                id="email"
+                placeholder={t("formEmail.placeHolderEmail")}
+                {...register("email", {
+                  required: {
+                    value: true,
+                    message: t("formEmail.email"),
+                  },
+                  pattern: {
+                    value: /(?=.*[@])/,
+                    message: t("formEmail.email2")
+                  }
+                })}
+              />
+              <p className="text-xs text-[#ff0000] font-bold">
+                {errors.email?.message}
+              </p>
+            </div>
+            <div>
               <textarea
                 rows=""
                 cols=""
