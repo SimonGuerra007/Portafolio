@@ -11,7 +11,7 @@ const Home = ({ darkMode }) => {
       className={`select-none ${
         darkMode
           ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-          : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+          : "bg-gradient-to-r from-[#7cbbff] to-[#ffffff]"
       } `}
     >
       <div className="h-[94vh] md:h-[93vh] w-[80%] md:w-[70%] m-auto flex flex-col md:flex-row justify-around items-center ">
@@ -24,19 +24,19 @@ const Home = ({ darkMode }) => {
               Simon Guerra
             </h1>
             <h4 className=" text-[10px] sm:text-[20px]">
-              <span className="text-[#ffb92c] font-bold">--- </span>
+              <span className={`font-bold ${darkMode ? 'text-[#ffb92c]' : 'text-[#1e8bff]'}`}>--- </span>
               {t("home.title2")}
             </h4>
           </div>
           <Link to="AboutMe" spy={true} smooth={true} duration={500} offset={-50}>
             <button
-              className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold bg-[#cf9013] hover:bg-[#ffb218] shadow-black`}
+              className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold shadow-black ${darkMode ? 'bg-[#cf9013] hover:bg-[#946c1c]' : 'bg-[#1e8bff] hover:bg-[#5fadff]'} `}
             >
               {t("home.seeMore")}
             </button>
           </Link>
         </div>
-        <div className="w-[80%] sm:w-[40%] pt-[20px] bg-[#cf9013] rounded-t-[15px] md:rounded-none">
+        <div className={`w-[80%] sm:w-[40%] pt-[20px] bg-[#cf9013] rounded-t-[15px] md:rounded-none [transition:1s] ${darkMode ? 'bg-[#cf9013]' : 'bg-[#1e8bff]'}`}>
           <div
             className={`w-[300px] md:w-[430px] lg:w-[500px]`}
           >

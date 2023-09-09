@@ -9,7 +9,7 @@ const AboutMe = ({ darkMode }) => {
       className={`h-[100vh] w-[100%] md:w-[100%] overflow-hidden flex justify-center items-center  ${
         darkMode
           ? "bg-gradient-to-r from-[#161616] to-[#292929]"
-          : "bg-gradient-to-r from-[#383838] to-[#929292]"
+          : "bg-gradient-to-r from-[#64afff] to-[#e3e3e3]"
       } `}
     >
       <div className="w-[80%] h-[80%] m-auto flex md:flex-row flex-col items-center justify-center gap-[30px] select-none">
@@ -17,7 +17,7 @@ const AboutMe = ({ darkMode }) => {
           className={`font-bold text-[20px] text-center sm:text-[40px] max:w-[50px] py-2 px-[30px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-full shadow-lg ${
             darkMode
               ? "bg-[#0f0f0f] shadow-[#747474]"
-              : "bg-[#b6b6b6] shadow-[#000000]"
+              : "bg-[#e1efff] shadow-[#000000]"
           } `}
         >
           <div className="w-[100%] flex md:flex-col justify-center items-center px-2 md:px-0">
@@ -38,7 +38,7 @@ const AboutMe = ({ darkMode }) => {
             className={`text-xl sm:text-3xl text-center font-bold w-[90%] max-h-[100px] rounded-[20px] p-2 shadow-md ${
               darkMode
                 ? "bg-[#0f0f0f] shadow-[#747474]"
-                : "bg-[#b6b6b6] shadow-[#000000]"
+                : "bg-[#e1efff] shadow-[#000000]"
             }`}
           >
             Simon David Guerra Bedoya
@@ -47,7 +47,7 @@ const AboutMe = ({ darkMode }) => {
             className={`sm:text-xl w-[90%] h-[350px] md:h-[400px] overflow-auto rounded-l-[20px] rounded-r-[5px] p-5 shadow-md flex flex-col gap-3 ${
               darkMode
                 ? "bg-[#0f0f0f] shadow-[#747474]"
-                : "bg-[#b6b6b6] shadow-[#000000]"
+                : "bg-[#e1efff] shadow-[#000000]"
             }`}
           >
             <div className="flex lg:flex-row flex-col-reverse justify-center items-center decoration-red-700">

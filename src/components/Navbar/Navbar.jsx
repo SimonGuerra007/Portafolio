@@ -16,13 +16,13 @@ const Navbar = ({
         className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] shadow-lg shadow-black ${
           darkMode
             ? "bg-gradient-to-r from-[#0b0b0b] to-[#2b2b2b]"
-            : "bg-gradient-to-r from-[#7b7b7b] to-[#3f3f3f]"
+            : "bg-gradient-to-r from-[#64afff] to-[#ffffff]"
         }`}
       >
-        <Link to="Home" spy={true} smooth={true} duration={500} offset={-50}>
+        <Link to="Home" spy={true} smooth={true} duration={500} offset={-30}>
           <h3
-            className={`text-2xl cursor-pointer font-bold transition-all text-[#ffc400] ${
-              darkMode ? "hover:text-[#ffecc5]" : "hover:text-[#674400]"
+            className={`text-2xl cursor-pointer font-bold transition-all ${
+              darkMode ? "text-[#ffc400] hover:text-[#ffecc5]" : "text-[#2819ff] hover:text-[#003067]"
             }`}
           >
             Simon Guerra.
@@ -32,7 +32,7 @@ const Navbar = ({
           <Link to="Home" spy={true} smooth={true} duration={500} offset={-50}>
             <li
               className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#2819ff]"
               }`}
             >
               {t("navbar.home")}
@@ -43,11 +43,11 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={-30}
           >
             <li
               className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#2819ff]"
               }`}
             >
               {t("navbar.aboutMe")}
@@ -58,11 +58,11 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={-30}
           >
             <li
               className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#2819ff]"
               }`}
             >
               {t("navbar.skills")}
@@ -73,11 +73,11 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={-30}
           >
             <li
               className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#ffc400]"
+                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#2819ff]"
               }`}
             >
               {t("navbar.proyects")}
@@ -91,19 +91,23 @@ const Navbar = ({
               className={`bg-inherit p-1 rounded-[5px] cursor-pointer border-2 ${
                 darkMode
                   ? "border-[#ffb92c] text-[#ffb92c]"
-                  : "border-[#000000] text-[#000000] bg-[#ffb92c]"
+                  : "border-[#000000] text-[#000000]"
               }`}
             >
               <option
                 className={`w-[25px] transition-all ${
-                  darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
+                  darkMode
+                    ? "bg-[#484848] text-[#ffb92c]"
+                    : "bg-[#cce5ff] text-black"
                 } `}
               >
                 {t("navbar.selectEnglish")}
               </option>
               <option
-                className={`w-[25px] transition-all text-black ${
-                  darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
+                className={`w-[25px] transition-all ${
+                  darkMode
+                    ? "bg-[#484848] text-[#ffb92c]"
+                    : "bg-[#cce5ff] text-black"
                 } `}
               >
                 {t("navbar.selectSpanish")}
@@ -116,7 +120,7 @@ const Navbar = ({
               className={`${
                 darkMode
                   ? "border-[#ffb92c] hover:rotate-1"
-                  : "border-[#1d1d1d] hover:-rotate-12 bg-[#ffb92c]"
+                  : "border-[#000000] hover:-rotate-12"
               } text-white cursor-pointer border-2 rounded-full p-1 transition-all  ${
                 rotateLogo ? "rotate-180" : "rotate-0"
               }`}
@@ -143,7 +147,7 @@ const Navbar = ({
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-5 h-5 text-black hover:animate-spin"
+                  className="w-5 h-5 text-[#000000] hover:animate-spin"
                 >
                   <path
                     strokeLinecap="round"

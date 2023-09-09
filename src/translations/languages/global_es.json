@@ -45,7 +45,8 @@
         "email2": "Debe contener el caracter @",
         "placeHolderEmail": "Escribe tu correo",
         "message1": "Este campo es requerido",
-        "placeHolderMessage": "Escribe un mensaje"
+        "placeHolderMessage": "Escribe un mensaje",
+        "button": "Enviar"
     },
 
     "modalSuccessSend": {

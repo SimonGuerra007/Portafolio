@@ -17,7 +17,7 @@ const ModalFormGmail = ({
 
   const submit = (data) => {
     setUserFormGmail(data);
-    if ({...userFormGmail} !== null) {
+    if ({...userFormGmail}) {
       setShowModalSuccessEmail(true);
     }
   };
@@ -37,12 +37,12 @@ const ModalFormGmail = ({
           className={`hover:transform-cpu transition-all w-[100%] h-[100%] sm:w-[600px] sm:h-[90%] relative rounded-none sm:rounded-[20px] flex flex-col justify-center items-center gap-5 ${
             darkMode
             ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-            : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+            : "bg-gradient-to-r from-[#64afff] to-[#e3e3e3]"
           }`}
         >
           <span
             onClick={handleShowModalGmail}
-            className={`rounded-full py-1 px-[10px] cursor-pointer absolute top-2 right-2 ${
+            className={`rounded-full py-1 px-[10px] cursor-pointer absolute top-2 right-2 transition-all hover:text-red-600 ${
               darkMode ? "bg-[#c7c7c7] text-black" : "bg-[#202020] text-white"
             }`}
           >
@@ -60,7 +60,7 @@ const ModalFormGmail = ({
                 className={`px-4 py-2 rounded-full w-[250px] sm:w-[350px] ${
                   darkMode
                   ? "bg-[#454545]"
-                  : "bg-[#323232] text-white"
+                  : "bg-[#daecff] placeholder:text-[#3f3f3f] text-black"
                 }`}
                 type="text"
                 name="name"
@@ -82,7 +82,7 @@ const ModalFormGmail = ({
                 className={`px-4 py-2 rounded-full w-[250px] sm:w-[350px] ${
                   darkMode
                   ? "bg-[#454545]"
-                  : "bg-[#323232] text-white"
+                  : "bg-[#daecff] placeholder:text-[#3f3f3f] text-black"
                 }`}
                 type="email"
                 name="email"
@@ -111,7 +111,7 @@ const ModalFormGmail = ({
                 className={`px-4 py-2 rounded-[15px] resize-none overflow-y-auto box-border flex flex-col flex-wrap w-[250px] h-[200px] sm:w-[350px] ${
                   darkMode
                   ? "bg-[#454545]"
-                  : "bg-[#323232] text-white"
+                  : "bg-[#daecff] placeholder:text-[#3f3f3f] text-black"
                 }`}
                 type="text"
                 name="message"
@@ -134,13 +134,13 @@ const ModalFormGmail = ({
               </p>
             </div>
             <button
-              className={`w-[150px] py-2 shadow-md rounded-full font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
+              className={`w-[150px] py-2 shadow-md rounded-full font-semibold transition-all ${
                 darkMode
-                  ? "shadow-white"
-                  : "shadow-black"
+                  ? "bg-[#cf9013] hover:bg-[#8a6927] shadow-white"
+                  : "bg-[#007bff] hover:bg-[#3395ff] shadow-black"
               }`}
             >
-              Enviar
+              {t("formEmail.button")}
             </button>
           </form>
         </div>

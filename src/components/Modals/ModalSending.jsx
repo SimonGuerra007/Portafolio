@@ -16,11 +16,13 @@ const ModalSending = ({ darkMode, modalSending }) => {
         }  ${
           darkMode
             ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-            : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+            : "bg-gradient-to-r from-[#64afff] to-[#e3e3e3]"
         }`}
       >
         <div
-          className={`w-[150px] rounded-full p-3 top-[35%] left-[70%] sm:left-[88%] [transition:1s]${darkMode ? "bg-[#ffbf00]" : "bg-[#ffbf00]"}`}
+          className={`w-[150px] rounded-full p-3 top-[35%] left-[70%] sm:left-[88%] [transition:1s]${
+            darkMode ? "bg-[#ffbf00]" : "bg-[#64afff]"
+          }`}
         >
           <img
             className="animate-spin"

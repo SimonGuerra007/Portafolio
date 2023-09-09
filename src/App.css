@@ -2,13 +2,13 @@ body::-webkit-scrollbar {
     width: 10px;   
   }
 body::-webkit-scrollbar-track {
-    background: orange;
+    background: #727272;
   }
   
 body::-webkit-scrollbar-thumb {
     background-color: rgb(0, 0, 0);
     border-radius: 20px;
-    border: 1px solid orange;
+    border: 1px solid #727272;
 }
 
 div::-webkit-scrollbar {
@@ -16,7 +16,7 @@ div::-webkit-scrollbar {
     
   }
 div::-webkit-scrollbar-track {
-    background: orange;      
+    background: #727272;      
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
   }
@@ -24,5 +24,5 @@ div::-webkit-scrollbar-track {
 div::-webkit-scrollbar-thumb {
     background-color: rgb(0, 0, 0);  
     border-radius: 20px;
-    border: 1px solid orange;
+    border: 1px solid #727272;
 }

@@ -22,7 +22,7 @@ const NavbarMovil = ({
       className={`${
         darkMode
           ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-          : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+          : "bg-gradient-to-r from-[#7cbbff] to-[#ffffff]"
       }`}
     >
       <svg
@@ -49,19 +49,19 @@ const NavbarMovil = ({
           className={`h-[100%] w-screen md:invisible flex flex-col fixed top-0 p-3 transition-all ${
             darkMode
               ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-              : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+              : "bg-gradient-to-r from-[#7cbbff] to-[#ffffff]"
           } ${showMain ? "left-0" : "left-[-200%]"}`}
         >
           <p
             onClick={handleShowMain}
-            className="cursor-pointer self-end px-[20px] font-semibold"
+            className={`cursor-pointer self-end px-[20px] font-semibold transition-all ${darkMode ? 'hover:text-[#ffc400]' : 'hover:text-[#2819ff]'}`}
           >
             {t("navbar.close")}
           </p>
           <div className="flex flex-col gap-[50px] p-[20px]">
             <h3
               onClick={handleShowMain}
-              className="text-2xl cursor-pointer font-bold text-[#ffb92c]"
+              className={`text-2xl cursor-pointer font-bold transition-all ${darkMode ? "text-[#ffc400] hover:text-[#ffecc5]" : "text-[#2819ff] hover:text-[#003067]"}`}
             >
               Simon Guerra
             </h3>
@@ -138,19 +138,19 @@ const NavbarMovil = ({
                   className={`bg-inherit p-1 rounded-[5px] cursor-pointer border-2 ${
                     darkMode
                       ? "border-[#ffb92c] text-[#ffb92c]"
-                      : "border-[#000000] text-[#000000] bg-[#ffb92c]"
+                      : "border-[#000000] text-[#000000]"
                   }`}
                 >
                   <option
                     className={`w-[25px] transition-all ${
-                      darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
+                      darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#dfddff]"
                     } `}
                   >
                     {t("navbar.selectEnglish")}
                   </option>
                   <option
                     className={`w-[25px] transition-all ${
-                      darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#ffb92c]"
+                      darkMode ? "bg-[#484848] text-[#ffb92c]" : "bg-[#dfddff]"
                     } `}
                   >
                     {t("navbar.selectSpanish")}
@@ -162,8 +162,8 @@ const NavbarMovil = ({
                   onClick={handleDarkMode}
                   className={`${
                     darkMode
-                      ? "border-[#ffb92c] hover:rotate-1 text-[#ffb92c]"
-                      : "border-[#1d1d1d] hover:-rotate-12 bg-[#ffb92c]"
+                      ? "border-[#ffb92c] hover:rotate-1"
+                      : "border-[#000000] hover:-rotate-12"
                   } text-white cursor-pointer border-2 rounded-full p-1 transition-all  ${
                     rotateLogo ? "rotate-180" : "rotate-0"
                   }`}
@@ -190,7 +190,7 @@ const NavbarMovil = ({
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-[30px] h-[30px] transition-all text-black hover:animate-spin"
+                      className="w-[30px] h-[30px] transition-all text-[#000000] hover:animate-spin"
                     >
                       <path
                         strokeLinecap="round"
@@ -229,13 +229,6 @@ const NavbarMovil = ({
               } `}
             >
               <img src="/images/github.png" alt="" />
-            </a>
-            <a
-              href="https://www.instagram.com/simond_guerra_b/"
-              target="blank"
-              className="w-[50px] rounded-[18px] bg-white transition-all cursor-pointer"
-            >
-              <img src="/images/instagram.png" alt="" />
             </a>
           </div>
         </div>

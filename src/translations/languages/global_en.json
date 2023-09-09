@@ -2,7 +2,7 @@
     "navbar": {
         "home": "Home",
         "aboutMe": "About me",
-        "proyects": "Proyects",
+        "proyects": "Projects",
         "skills": "Skills",
         "selectEnglish": "English",
         "selectSpanish": "Spanish",
@@ -45,7 +45,8 @@
         "email2": "Must contain the character @",
         "placeHolderEmail": "Type your email",
         "message1": "This field is required",
-        "placeHolderMessage": "Type a message"
+        "placeHolderMessage": "Type a message",
+        "button": "Submit"
     },
 
     "modalSuccessSend": {

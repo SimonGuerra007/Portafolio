@@ -5,14 +5,16 @@ const LoadingLang = ({ loadingLang, darkMode }) => {
     <div>
       <div
         className={`h-[100%] w-[50%] top-0 fixed z-[6000] transition-all ${
-          darkMode ? "bg-[#191919]" : "bg-[#666666]"
+          darkMode
+            ? "bg-[#171717]"
+            : "bg-[#e3e3e3]"
         } ${loadingLang ? "left-0" : "left-[-200%]"}`}
       >
         <div className="relative w-full h-full">
           <div
-            className={`absolute w-[150px] rounded-full p-3 top-[35%] left-[70%] sm:left-[88%] transition-all ${loadingLang ? 'visible' : 'invisible'} ${
-              darkMode ? "bg-[#3f3f3f]" : "bg-[#949494]"
-            }`}
+            className={`absolute w-[150px] rounded-full p-3 top-[35%] left-[70%] sm:left-[88%] transition-all ${
+              loadingLang ? "visible" : "visible"
+            } ${darkMode ? "bg-[#ffbf00]" : "bg-[#007bff]"}`}
           >
             <img
               className="animate-spin"
@@ -24,8 +26,12 @@ const LoadingLang = ({ loadingLang, darkMode }) => {
         </div>
       </div>
       <div
-        className={`h-[100%] w-[50%] fixed top-0 right-0 z-[5500] transition-all bg-[#ffbf00] ${
+        className={`h-[100%] w-[50%] fixed top-0 right-0 z-[5500] transition-all ${
           loadingLang ? "right-0" : "right-[-200%]"
+        } ${
+          darkMode
+            ? "bg-[#ffbf00]"
+            : "bg-[#64afff]"
         }`}
       ></div>
     </div>

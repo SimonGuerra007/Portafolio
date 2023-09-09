@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 // ! COMPONENTS
@@ -30,7 +30,9 @@ import ModalSending from "./components/Modals/ModalSending";
 import SendingSuccess from "./components/Modals/SendingSuccess";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const getDarkModeStorage = JSON.parse(localStorage.getItem('darkMode'));
+
+  const [darkMode, setDarkMode] = useState(getDarkModeStorage);
   const [languague, setLanguague] = useState("");
   const [showModalGmail, setShowModalGmail] = useState(false);
   const [loadingLang, setLoadingLang] = useState(false);
@@ -43,6 +45,7 @@ function App() {
   const [sendingSuccess, setSendingSuccess] = useState(false)
 
   const { i18n } = useTranslation();
+
 
   const {
     reset,
@@ -108,11 +111,19 @@ function App() {
   setTimeout(() => {
     setLoading(false);
   }, 1000);
+  
+  localStorage.setItem('darkMode', JSON.stringify(darkMode));
+
+  useEffect(() => {
+    if (darkMode) {
+      setDarkMode(darkMode);
+    }
+  }, []);
 
   return (
     <main
       className={`transition-all overflow-hidden  ${
-        darkMode ? "bg-[#121212] text-white" : "bg-[#818181] text-black"
+        darkMode ? "bg-[#121212] text-white" : "bg-[#aed5ff] text-black"
       }`}
     >
       <Navbar
@@ -160,7 +171,7 @@ function App() {
 
       <ModalSending darkMode={darkMode} modalSending={modalSending} />
 
-      <SendingSuccess sendingSuccess={sendingSuccess} />
+      <SendingSuccess sendingSuccess={sendingSuccess} darkMode={darkMode} />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
 

@@ -13,9 +13,6 @@ const Contact = ({ darkMode, handleShowModalGmail}) => {
       <a href="https://github.com/SimonGuerra007" target="blank" className={`w-[50px] p-[px] rounded-[15px] transition-all cursor-pointer bg-white ${darkMode ? '' : 'border-[4px] border-black'} `}>
         <img src="/images/github.png" alt="" />
       </a>
-      <a href="https://www.instagram.com/simond_guerra_b/" target="blank" className="w-[50px] rounded-[18px] bg-white transition-all cursor-pointer">
-        <img src="/images/instagram.png" alt="" />
-      </a>
     </div>
   );
 };

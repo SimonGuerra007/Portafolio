@@ -19,8 +19,8 @@ const ModalSuccessSend = ({ darkMode, sendEmail, setShowModalSuccessEmail, showM
       <div
         className={`w-[100%] h-[50%] sm:w-[60%] sm:h-[50%] p-5 rounded-[20px] flex flex-col justify-center items-center gap-[30px] transition-all fixed ${showModalSuccessEmail ? 'top-[25%]' : 'top-[200%]'}  ${
           darkMode
-            ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
-            : "bg-gradient-to-r from-[#3f3f3f] to-[#aaaaaa]"
+          ? "bg-gradient-to-r from-[#161616] to-[#3f3f3f]"
+          : "bg-gradient-to-r from-[#64afff] to-[#e3e3e3]"
         }`}
       >
         <h4 className="text-2xl text-center font-semibold">{t("modalSuccessSend.title")}</h4>
@@ -29,16 +29,16 @@ const ModalSuccessSend = ({ darkMode, sendEmail, setShowModalSuccessEmail, showM
             onClick={handleSubmitEmail}
             className={`w-[100px] py-2 shadow-md rounded-[5px] font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
               darkMode
-                ? "shadow-white"
-                : "shadow-black"
+                  ? "bg-[#cf9013] hover:bg-[#8a6927] shadow-white"
+                  : "bg-[#007bff] hover:bg-[#3395ff] shadow-black"
             }`}
           >{t("modalSuccessSend.confirm")}</button>
           <button
             onClick={handleCloseModalSuccess}
             className={`w-[100px] py-2 shadow-md rounded-[5px] font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
               darkMode
-                ? "shadow-white"
-                : "shadow-black"
+                  ? "bg-[#cf9013] hover:bg-[#8a6927] shadow-white"
+                  : "bg-[#007bff] hover:bg-[#3395ff] shadow-black"
             }`}
           >{t("modalSuccessSend.cancel")}</button>
         </div>
