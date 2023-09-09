@@ -36,7 +36,7 @@ const Home = ({ darkMode }) => {
             </button>
           </Link>
         </div>
-        <div className={`w-[80%] sm:w-[40%] pt-[20px] bg-[#cf9013] rounded-t-[15px] md:rounded-none [transition:1s] ${darkMode ? 'bg-[#cf9013]' : 'bg-[#1e8bff]'}`}>
+        <div className={`w-[80%] sm:w-[40%] pt-[20px] rounded-t-[15px] md:rounded-none [transition:1s] ${darkMode ? 'bg-[#cf9013]' : 'bg-[#1e8bff]'}`}>
           <div
             className={`w-[300px] md:w-[430px] lg:w-[500px]`}
           >
