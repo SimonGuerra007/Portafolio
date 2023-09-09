@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Contact = ({ darkMode, handleShowModalGmail}) => {
   return (
-    <div className="fixed z-[10] top-[30%] left-[3%] flex flex-col gap-6 invisible md:visible">
+    <div className="fixed z-[10] top-[38%] left-[3%] flex flex-col gap-6 invisible md:visible">
       <div onClick={handleShowModalGmail} className="w-[50px] p-[5px] rounded-[15px] relative transition-all cursor-pointer bg-[#ffffff]">
         <img src="/images/gmail.png" alt="" />
       </div>
