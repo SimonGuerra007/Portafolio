@@ -42,7 +42,7 @@ const ModalFormGmail = ({
         >
           <span
             onClick={handleShowModalGmail}
-            className={`rounded-full py-1 px-[10px] cursor-pointer absolute top-2 right-2 transition-all hover:text-red-600 ${
+            className={`rounded-full py-1 px-[10px] font-bold cursor-pointer absolute top-2 right-2 transition-all hover:text-red-600 ${
               darkMode ? "bg-[#c7c7c7] text-black" : "bg-[#202020] text-white"
             }`}
           >

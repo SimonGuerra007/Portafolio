@@ -61,5 +61,11 @@
 
     "sendingSuccess": {
         "title": "Enviado correctamente"
+    },
+
+    "modalDownload": {
+        "message": "Estás seguro que quieres descargar el CV?",
+        "download": "Descargar",
+        "cancel": "Cancelar"
     }
 }

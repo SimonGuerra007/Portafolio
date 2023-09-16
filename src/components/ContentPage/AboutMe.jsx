@@ -21,15 +21,15 @@ const AboutMe = ({ darkMode }) => {
           } `}
         >
           <div className="w-[100%] flex md:flex-col justify-center items-center px-2 md:px-0">
-            <span>{t("aboutMe.title1")}</span>
-            <span>{t("aboutMe.title2")}</span>
-            <span>{t("aboutMe.title3")}</span>
-            <span>{t("aboutMe.title4")}</span>
-            <span>{t("aboutMe.title5")}</span>
+            <h5>{t("aboutMe.title1")}</h5>
+            <h5>{t("aboutMe.title2")}</h5>
+            <h5>{t("aboutMe.title3")}</h5>
+            <h5>{t("aboutMe.title4")}</h5>
+            <h5>{t("aboutMe.title5")}</h5>
           </div>
           <div className="md:flex md:flex-col items-center pr-2 md:pr-0">
-            <span>{t("aboutMe.title6")}</span>
-            <span>{t("aboutMe.title7")}</span>
+            <h5>{t("aboutMe.title6")}</h5>
+            <h5>{t("aboutMe.title7")}</h5>
           </div>
         </div>
 

@@ -10,6 +10,7 @@ const NavbarMovil = ({
   handleDarkMode,
   rotateLogo,
   handleShowModalGmail,
+  handleShowModalDownload
 }) => {
   const { t } = useTranslation();
 
@@ -54,14 +55,20 @@ const NavbarMovil = ({
         >
           <p
             onClick={handleShowMain}
-            className={`cursor-pointer self-end px-[20px] font-semibold transition-all ${darkMode ? 'hover:text-[#ffc400]' : 'hover:text-[#2819ff]'}`}
+            className={`cursor-pointer self-end px-[20px] font-semibold transition-all ${
+              darkMode ? "hover:text-[#ffc400]" : "hover:text-[#2819ff]"
+            }`}
           >
             {t("navbar.close")}
           </p>
           <div className="flex flex-col gap-[50px] p-[20px]">
             <h3
               onClick={handleShowMain}
-              className={`text-2xl cursor-pointer font-bold transition-all ${darkMode ? "text-[#ffc400] hover:text-[#ffecc5]" : "text-[#2819ff] hover:text-[#003067]"}`}
+              className={`text-2xl cursor-pointer font-bold transition-all ${
+                darkMode
+                  ? "text-[#ffc400] hover:text-[#ffecc5]"
+                  : "text-[#2819ff] hover:text-[#003067]"
+              }`}
             >
               Simon Guerra
             </h3>
@@ -224,12 +231,17 @@ const NavbarMovil = ({
             <a
               href="https://github.com/SimonGuerra007"
               target="blank"
-              className={`w-[50px] p-[px] rounded-[15px] transition-all cursor-pointer bg-white ${
-                darkMode ? "" : "border-[4px] border-black"
-              } `}
+              className={`w-[50px] rounded-[15px] transition-all cursor-pointer bg-white border-[3px] border-black`}
             >
               <img src="/images/github.png" alt="" />
             </a>
+            <button
+              onClick={handleShowModalDownload}
+              href=""
+              className="w-[50px] h-[50px] p-[5px] rounded-[15px] transition-all cursor-pointer bg-white border-[3px] border-black "
+            >
+              <img src="/images/curriculum.png" alt="" />
+            </button>
           </div>
         </div>
       </div>

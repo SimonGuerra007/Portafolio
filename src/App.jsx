@@ -28,9 +28,10 @@ import { useForm } from "react-hook-form";
 import { Element } from "react-scroll";
 import ModalSending from "./components/Modals/ModalSending";
 import SendingSuccess from "./components/Modals/SendingSuccess";
+import ModalDownloadCv from "./components/Modals/ModalDownloadCv";
 
 function App() {
-  const getDarkModeStorage = JSON.parse(localStorage.getItem('darkMode'));
+  const getDarkModeStorage = JSON.parse(localStorage.getItem("darkMode"));
 
   const [darkMode, setDarkMode] = useState(getDarkModeStorage);
   const [languague, setLanguague] = useState("");
@@ -41,11 +42,11 @@ function App() {
   const [showModalSuccessEmail, setShowModalSuccessEmail] = useState(false);
   const [showMain, setShowMain] = useState(false);
   const [rotateLogo, setRotateLogo] = useState(false);
-  const [modalSending, setModalSending] = useState(false)
-  const [sendingSuccess, setSendingSuccess] = useState(false)
+  const [modalSending, setModalSending] = useState(false);
+  const [sendingSuccess, setSendingSuccess] = useState(false);
+  const [modalDownload, setModalDownload] = useState(false);
 
   const { i18n } = useTranslation();
-
 
   const {
     reset,
@@ -58,6 +59,10 @@ function App() {
     setShowModalGmail(!showModalGmail);
   };
 
+  const handleShowModalDownload = () => {
+    setModalDownload(!modalDownload);
+  };
+
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
     setRotateLogo(!rotateLogo);
@@ -66,7 +71,7 @@ function App() {
   const handleChangeLanguague = (e) => {
     setLanguague(e.target.value);
 
-    if (languague === "Spanish" || languague === "Español") {
+    if (languague === "Spanish") {
       setTimeout(() => {
         i18n.changeLanguage("en");
       }, 150);
@@ -96,11 +101,11 @@ function App() {
           console.log("SUCCESS!", response.status, response.text);
           reset(EMPTY_FORM_VALUES);
           setShowModalGmail(false);
-          setModalSending(false)
-          setSendingSuccess(true)
+          setModalSending(false);
+          setSendingSuccess(true);
           setTimeout(() => {
-            setSendingSuccess(false)
-          }, 3000)
+            setSendingSuccess(false);
+          }, 3000);
         },
         (err) => {
           console.log("FAILED...", err);
@@ -111,8 +116,8 @@ function App() {
   setTimeout(() => {
     setLoading(false);
   }, 1000);
-  
-  localStorage.setItem('darkMode', JSON.stringify(darkMode));
+
+  localStorage.setItem("darkMode", JSON.stringify(darkMode));
 
   useEffect(() => {
     if (darkMode) {
@@ -141,11 +146,13 @@ function App() {
         handleChangeLanguague={handleChangeLanguague}
         handleDarkMode={handleDarkMode}
         handleShowModalGmail={handleShowModalGmail}
+        handleShowModalDownload={handleShowModalDownload}
       />
 
       <Contact
         darkMode={darkMode}
         handleShowModalGmail={handleShowModalGmail}
+        handleShowModalDownload={handleShowModalDownload}
       />
 
       <ModalFormGmail
@@ -172,6 +179,12 @@ function App() {
       <ModalSending darkMode={darkMode} modalSending={modalSending} />
 
       <SendingSuccess sendingSuccess={sendingSuccess} darkMode={darkMode} />
+
+      <ModalDownloadCv
+        darkMode={darkMode}
+        modalDownload={modalDownload}
+        handleShowModalDownload={handleShowModalDownload}
+      />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
 
