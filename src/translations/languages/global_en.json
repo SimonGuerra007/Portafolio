@@ -64,7 +64,8 @@
     },
 
     "modalDownload": {
-        "message": "Are you sure you want to download the CV?",
+        "title": "Are you sure you want to download the CV?",
+        "message": "The CV is in english, if you want the CV in spanish, change the language",
         "download": "Download",
         "cancel": "Cancel"
     }

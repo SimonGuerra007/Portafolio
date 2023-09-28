@@ -64,7 +64,8 @@
     },
 
     "modalDownload": {
-        "message": "Estás seguro que quieres descargar el CV?",
+        "title": "Estás seguro que quieres descargar el CV?",
+        "message": "El CV está en español, si lo quieres en inglés, cambia de idioma",
         "download": "Descargar",
         "cancel": "Cancelar"
     }
