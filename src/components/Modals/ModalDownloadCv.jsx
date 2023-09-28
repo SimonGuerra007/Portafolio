@@ -5,6 +5,7 @@ const ModalDownloadCv = ({
   darkMode,
   modalDownload,
   handleShowModalDownload,
+  cvLanguage
 }) => {
   const { t } = useTranslation();
   return (
@@ -24,7 +25,7 @@ const ModalDownloadCv = ({
         <div className="flex justify-center items-center gap-[30px]">
           <a
             onClick={handleShowModalDownload}
-            href="/files/Curriculum.pdf"
+            href={cvLanguage ? "/files/CVSimonGuerra_Español.pdf" : "/files/CVSimonGuerra_English.pdf"}
             download="CV Simon David Guerra Bedoya"
             className={`w-[100px] py-2 shadow-md rounded-[5px] text-center font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
               darkMode

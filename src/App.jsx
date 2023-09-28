@@ -45,8 +45,11 @@ function App() {
   const [modalSending, setModalSending] = useState(false);
   const [sendingSuccess, setSendingSuccess] = useState(false);
   const [modalDownload, setModalDownload] = useState(false);
+  const [cvLanguage, setCvLanguage] = useState(false)
 
   const { i18n } = useTranslation();
+
+  console.log(cvLanguage);
 
   const {
     reset,
@@ -76,11 +79,13 @@ function App() {
         i18n.changeLanguage("en");
       }, 150);
       setLoadingLang(true);
+      setCvLanguage(false)
     } else {
       setTimeout(() => {
         i18n.changeLanguage("es");
       }, 150);
       setLoadingLang(true);
+      setCvLanguage(true)
     }
 
     setTimeout(() => {
@@ -184,6 +189,7 @@ function App() {
         darkMode={darkMode}
         modalDownload={modalDownload}
         handleShowModalDownload={handleShowModalDownload}
+        cvLanguage={cvLanguage}
       />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
