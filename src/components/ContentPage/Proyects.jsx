@@ -37,17 +37,6 @@ const Proyects = ({ darkMode }) => {
                 >
                   {t("projects.seeWeb")}
                 </a>
-                <a
-                  href="https://github.com/SimonGuerra007/Pokedex"
-                  target="blank"
-                  className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
-                    darkMode
-                      ? "bg-[#ffb92c] hover:bg-[#c48e31]"
-                      : "bg-[#1e8bff] hover:bg-[#5fadff]"
-                  }`}
-                >
-                  {t("projects.seeRepository")}
-                </a>
               </div>
             </div>
             <img className="rounded-[10px]" src="/images/Pokedex.png" alt="" />
@@ -68,17 +57,6 @@ const Proyects = ({ darkMode }) => {
                   }`}
                 >
                   {t("projects.seeWeb")}
-                </a>
-                <a
-                  href="https://github.com/SimonGuerra007/Weather-App"
-                  target="blank"
-                  className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
-                    darkMode
-                      ? "bg-[#ffb92c] hover:bg-[#c48e31]"
-                      : "bg-[#1e8bff] hover:bg-[#5fadff]"
-                  }`}
-                >
-                  {t("projects.seeRepository")}
                 </a>
               </div>
             </div>
@@ -107,17 +85,6 @@ const Proyects = ({ darkMode }) => {
                 >
                   {t("projects.seeWeb")}
                 </a>
-                <a
-                  href="https://github.com/SimonGuerra007/RickAndMorty"
-                  target="blank"
-                  className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
-                    darkMode
-                      ? "bg-[#ffb92c] hover:bg-[#c48e31]"
-                      : "bg-[#1e8bff] hover:bg-[#5fadff]"
-                  }`}
-                >
-                  {t("projects.seeRepository")}
-                </a>
               </div>
             </div>
             <img
@@ -140,17 +107,6 @@ const Proyects = ({ darkMode }) => {
                   }`}
                 >
                   {t("projects.seeWeb")}
-                </a>
-                <a
-                  href="https://github.com/SimonGuerra007/ecommerce"
-                  target="blank"
-                  className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
-                    darkMode
-                      ? "bg-[#ffb92c] hover:bg-[#c48e31]"
-                      : "bg-[#1e8bff] hover:bg-[#5fadff]"
-                  }`}
-                >
-                  {t("projects.seeRepository")}
                 </a>
               </div>
             </div>
