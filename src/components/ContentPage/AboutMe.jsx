@@ -16,7 +16,7 @@ const AboutMe = ({ darkMode }) => {
         <div
           className={`font-bold text-[20px] text-center sm:text-[40px] max:w-[50px] py-2 px-[30px] rounded-full flex md:flex-col flex-row sm:gap-[30px] md:rounded-full shadow-lg ${
             darkMode
-              ? "bg-[#0f0f0f] shadow-[#747474]"
+              ? "bg-[#0f0f0f] shadow-[#000000]"
               : "bg-[#e1efff] shadow-[#000000]"
           } `}
         >
@@ -37,7 +37,7 @@ const AboutMe = ({ darkMode }) => {
           <h3
             className={`text-xl sm:text-3xl text-center font-bold w-[90%] max-h-[100px] rounded-[20px] p-2 shadow-md ${
               darkMode
-                ? "bg-[#0f0f0f] shadow-[#747474]"
+                ? "bg-[#0f0f0f] shadow-[#000000]"
                 : "bg-[#e1efff] shadow-[#000000]"
             }`}
           >
@@ -46,7 +46,7 @@ const AboutMe = ({ darkMode }) => {
           <div
             className={`sm:text-xl w-[90%] h-[350px] md:h-[400px] overflow-auto rounded-l-[20px] rounded-r-[5px] p-5 shadow-md flex flex-col gap-3 ${
               darkMode
-                ? "bg-[#0f0f0f] shadow-[#747474]"
+                ? "bg-[#0f0f0f] shadow-[#000000]"
                 : "bg-[#e1efff] shadow-[#000000]"
             }`}
           >

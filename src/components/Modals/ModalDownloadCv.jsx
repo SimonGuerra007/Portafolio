@@ -26,15 +26,10 @@ const ModalDownloadCv = ({
         <h3 className="text-2xl text-center font-semibold">
           {t("modalDownload.title")}
         </h3>
-        <p className="text-center text-[14px] text-yellow-500">{t("modalDownload.message")}</p>
         <div className="flex justify-center items-center gap-[30px]">
           <a
             onClick={handleShowModalDownload}
-            href={
-              cvLanguage
-                ? "/files/CVSimonGuerra_Español.pdf"
-                : "/files/CVSimonGuerra_English.pdf"
-            }
+            href="/files/CV-SimonGuerra.pdf"
             download="CV Simon David Guerra Bedoya"
             className={`w-[100px] py-2 shadow-md rounded-[5px] text-center font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
               darkMode

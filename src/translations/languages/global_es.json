@@ -11,7 +11,7 @@
 
     "home": {
         "title1": "Hola, mi nombre es",
-        "title2": "Desarrollador web Front End",
+        "title2": "Desarrollador web Full Stack",
         "seeMore": "Ver mas"
     },
 
@@ -65,7 +65,6 @@
 
     "modalDownload": {
         "title": "Estás seguro que quieres descargar el CV?",
-        "message": "El CV está en español, si lo quieres en inglés, cambia de idioma",
         "download": "Descargar",
         "cancel": "Cancelar"
     }

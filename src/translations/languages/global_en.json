@@ -11,7 +11,7 @@
 
     "home": {
         "title1": "Hi, my name is",
-        "title2": "Front End web developer",
+        "title2": "Full Stack web developer",
         "seeMore": "See more"
     },
 
@@ -65,7 +65,6 @@
 
     "modalDownload": {
         "title": "Are you sure you want to download the CV?",
-        "message": "The CV is in english, if you want the CV in spanish, change the language",
         "download": "Download",
         "cancel": "Cancel"
     }

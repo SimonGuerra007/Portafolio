@@ -13,7 +13,7 @@ const Navbar = ({
   return (
     <div>
       <nav
-        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] shadow-lg shadow-black ${
+        className={`flex justify-between items-center px-9 py-3 invisible md:visible fixed top-0 z-[999] w-[100%] shadow-md shadow-black ${
           darkMode
             ? "bg-gradient-to-r from-[#0b0b0b] to-[#2b2b2b]"
             : "bg-gradient-to-r from-[#64afff] to-[#ffffff]"

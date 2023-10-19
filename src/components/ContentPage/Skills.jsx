@@ -3,7 +3,7 @@ import "../styles/skills.css";
 import { useTranslation } from "react-i18next";
 
 const Skills = ({ darkMode }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div
       className={`h-[100vh] flex flex-col justify-center items-center gap-[50px] ${
@@ -15,36 +15,81 @@ const Skills = ({ darkMode }) => {
       <h2
         className={`text-center text-[25px] md:text-[50px]  font-bold px-[15px] py-[5px] rounded-full shadow-md ${
           darkMode
-            ? "bg-[#0f0f0f] shadow-[#747474]"
+            ? "bg-[#0f0f0f] shadow-[#000000]"
             : "bg-[#e1efff] shadow-[#000000]"
         } `}
       >
         {t("skills.title")}
       </h2>
       <div
-        className={`w-[60%] text-center md:text-[20px] font-bold p-[10px] rounded-[20px] shadow-md flex flex-col justify-around ${
+        className={`w-[75%] text-center md:text-[20px] font-bold p-[10px] rounded-[20px] shadow-md flex flex-col justify-around gap-8 ${
           darkMode
-            ? "bg-[#0f0f0f] shadow-[#747474]"
+            ? "bg-[#0f0f0f] shadow-[#000000]"
             : "bg-[#e1efff] shadow-[#000000]"
         }`}
       >
-        <div className="w-[70px] md:w-[100px] self-center mb-[40px] md:mb-0">
-          <p>HTML</p>
-          <img src="/images/Html.png" alt="" />
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>HTML</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[80%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>80%</span>
         </div>
-        <div className="flex flex-col md:flex-row justify-around items-center md:pl-[40px] gap-[40px] md:gap-0">
-          <div className="w-[70px] md:w-[100px]">
-            <p>CSS</p>
-            <img src="/images/Css.png" alt="" />
-          </div>
-          <div className="w-[130px] md:w-[190px]">
-            <p>JAVASCRIPT</p>
-            <img src="/images/Javascript.png" alt="" />
-          </div>
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>CSS</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[80%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>80%</span>
         </div>
-        <div className="w-[70px] md:w-[100px] self-center mt-[40px] md:mt-0">
-          <p>REACT</p>
-          <img src="/images/React.png" alt="" />
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>JAVASCRIPT</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[75%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>75%</span>
+        </div>
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>REACT</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[85%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>85%</span>
+        </div>
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>REDUX & ROUTER</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[70%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>70%</span>
+        </div>
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>NODEJS</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[50%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>60%</span>
+        </div>
+        <div className="flex justify-end items-center gap-4 pr-[20%]">
+          <h4>EXPRESS</h4>
+          <div
+            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[50%] after:h-full after:rounded-full ${
+              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
+            }`}
+          ></div>
+          <span>60%</span>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const Proyects = ({ darkMode }) => {
       <h2
         className={`text-center text-[25px] md:text-[50px]  font-bold py-[5px] px-[20px] rounded-full shadow-md mb-[30px] ${
           darkMode
-            ? "bg-[#0f0f0f] shadow-[#747474]"
+            ? "bg-[#0f0f0f] shadow-[#000000]"
             : "bg-[#e1efff] shadow-[#000000]"
         } `}
       >
