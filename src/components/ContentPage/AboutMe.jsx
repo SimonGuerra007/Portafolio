@@ -50,20 +50,7 @@ const AboutMe = ({ darkMode }) => {
                 : "bg-[#e1efff] shadow-[#000000]"
             }`}
           >
-            <div className="flex lg:flex-row flex-col-reverse justify-center items-center decoration-red-700">
-              <p className="lg:w-[65%]">{t("aboutMe.information")}</p>
-              <div className="lg:w-[35%] relative">
-                {darkMode ? <img
-                  className={`rounded-full h-[200px] w-[200px] border-[4px] border-[#ffb92c]`}
-                  src="/images/PhotoPortafolioDark.png"
-                  alt=""
-                /> : <img
-                className={`rounded-full h-[200px] w-[200px] border-[4px] border-black`}
-                src="/images/PhotoPortafolio.png"
-                alt=""
-              />}
-              </div>
-            </div>
+            <p>{t("aboutMe.information")}</p>
             <p>{t("aboutMe.information2")}</p>
             <p>{t("aboutMe.information3")}</p>
           </div>

@@ -1,0 +1,103 @@
+.frontSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90px;
+    height: 90px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.frontSide,
+.frontSide::before {
+    background: linear-gradient(43deg, rgb(0, 175, 0) 0%, rgb(76, 191, 0) 46%, rgb(0, 175, 0) 100%);
+}
+
+.frontSide::before {
+    top: 90%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    z-index: 100;
+    border-radius: 100%;
+    filter: blur(20px);
+    animation: animate 1s linear infinite;
+}
+
+
+.image-wpp {
+    width: 60px;
+    z-index: 101;
+    position: fixed;
+    top: 85%;
+    left: 90%;
+    transition: 0.2s;
+}
+
+.image-wpp:hover {
+    transform: scale(0.9, 0.9);
+}
+
+@media (min-width: 320px) {
+    .image-wpp {
+        left: 75%;
+    }
+
+    .frontSide::before {
+        left: 85%;
+    }
+}
+
+@media (min-width: 450px) {
+    .image-wpp {
+        left: 84%;
+    }
+
+    .frontSide::before {
+        left: 90%;
+    }
+}
+@media (min-width: 700px) {
+    .image-wpp {
+        left: 89%;
+    }
+
+    .frontSide::before {
+        left: 93%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .image-wpp {
+        left: 90.5%;
+    }
+
+    .frontSide::before {
+        left: 93%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0.5;
+    }
+    
+    80% {
+        opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.5;
+    }
+  }

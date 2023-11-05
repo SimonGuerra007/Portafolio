@@ -29,6 +29,7 @@ import { Element } from "react-scroll";
 import ModalSending from "./components/Modals/ModalSending";
 import SendingSuccess from "./components/Modals/SendingSuccess";
 import ModalDownloadCv from "./components/Modals/ModalDownloadCv";
+import ButtonWpp from "./components/Modals/ButtonWpp";
 
 function App() {
   const getDarkModeStorage = JSON.parse(localStorage.getItem("darkMode"));
@@ -191,6 +192,8 @@ function App() {
         handleShowModalDownload={handleShowModalDownload}
         cvLanguage={cvLanguage}
       />
+
+      <ButtonWpp />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
 
