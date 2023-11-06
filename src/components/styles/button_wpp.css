@@ -14,11 +14,14 @@
     box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
     font-weight: 700;
     cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 182.5%;
+    left: 189.3%;
 }
 
-.frontSide,
 .frontSide::before {
-    background: linear-gradient(43deg, rgb(0, 175, 0) 0%, rgb(76, 191, 0) 46%, rgb(0, 175, 0) 100%);
+    background: linear-gradient(43deg, rgb(36, 162, 36) 0%, rgb(76, 191, 0) 46%, rgb(0, 175, 0) 100%);
 }
 
 .frontSide::before {
@@ -56,6 +59,10 @@
 
     .frontSide::before {
         left: 85%;
+    }
+
+    .frontSide {
+        left: 88%;
     }
 }
 

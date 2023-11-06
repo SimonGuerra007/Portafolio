@@ -22,74 +22,44 @@ const Skills = ({ darkMode }) => {
         {t("skills.title")}
       </h2>
       <div
-        className={`w-[75%] text-center md:text-[20px] font-bold p-[10px] rounded-[20px] shadow-md flex flex-col justify-around gap-8 ${
+        className={`w-[75%] text-center md:text-[20px] font-bold p-[10px] rounded-[20px] shadow-md flex flex-col justify-around items-center gap-8 ${
           darkMode
             ? "bg-[#0f0f0f] shadow-[#000000]"
             : "bg-[#e1efff] shadow-[#000000]"
         }`}
       >
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>HTML</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[80%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>80%</span>
+        <div className="w-full flex justify-around items-center gap-5">
+          <div className="flex flex-col justify-center items-center">
+          <div className="w-[70px]">
+              <img src="/images/Html.png" alt="" />
+            </div>
+            <h4>HTML</h4>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-[70px]">
+              <img src="/images/Css.png" alt="" />
+            </div>
+            <h4>CSS</h4>
+            <div>
+              <h4 className="font-semibold">Tailwind CSS</h4>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>CSS</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[80%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>80%</span>
+        <div className="flex flex-col justify-center items-center">
+          <div className="w-[70px]">
+            <img src="/images/React.png" alt="" />
+          </div>
+          <h4>REACT.JS</h4>
+          <div className="flex justify-center items-center gap-5">
+            <h4 className="font-semibold">Redux</h4>
+            <h4 className="font-semibold">Router</h4>
+          </div>
         </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>JAVASCRIPT</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[75%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>75%</span>
-        </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>REACT</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[85%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>85%</span>
-        </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>REDUX & ROUTER</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[70%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>70%</span>
-        </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>NODEJS</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[50%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>60%</span>
-        </div>
-        <div className="flex justify-end items-center gap-4 pr-[20%]">
-          <h4>EXPRESS</h4>
-          <div
-            className={`w-[50%] h-[10px] rounded-full after:content-[''] after:block after:w-[50%] after:h-full after:rounded-full ${
-              darkMode ? "bg-white/20 after:bg-[#ffbf1d]" : "bg-black/70 after:bg-[#408cff]"
-            }`}
-          ></div>
-          <span>60%</span>
+        <div className="flex flex-col justify-center items-center">
+          <div className="w-[120px]">
+            <img src="/images/NodeJS.webp" alt="" />
+          </div>
+          <h4 className="font-semibold">Express</h4>
         </div>
       </div>
     </div>
