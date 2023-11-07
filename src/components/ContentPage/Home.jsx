@@ -24,29 +24,39 @@ const Home = ({ darkMode }) => {
               Simon Guerra
             </h1>
             <h4 className=" text-[10px] sm:text-[20px]">
-              <span className={`font-bold ${darkMode ? 'text-[#ffb92c]' : 'text-[#1e8bff]'}`}>--- </span>
+              <span
+                className={`font-bold ${
+                  darkMode ? "text-[#ffb92c]" : "text-[#1e8bff]"
+                }`}
+              >
+                ---{" "}
+              </span>
               {t("home.title2")}
             </h4>
           </div>
-          <Link to="AboutMe" spy={true} smooth={true} duration={500} offset={-50}>
+          <Link
+            to="AboutMe"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-50}
+          >
             <button
-              className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold shadow-black ${darkMode ? 'bg-[#cf9013] hover:bg-[#946c1c]' : 'bg-[#1e8bff] hover:bg-[#5fadff]'} `}
+              className={`w-[200px] p-[10px] rounded-full shadow-md transition-[1s] font-bold shadow-black ${
+                darkMode
+                  ? "bg-[#cf9013] hover:bg-[#946c1c]"
+                  : "bg-[#1e8bff] hover:bg-[#5fadff]"
+              } `}
             >
               {t("home.seeMore")}
             </button>
           </Link>
         </div>
-        <div className={`w-[80%] sm:w-[40%] pt-[20px] rounded-t-[15px] md:rounded-none [transition:1s] ${darkMode ? 'bg-[#cf9013]' : 'bg-[#1e8bff]'}`}>
-          <div
-            className={`w-[300px] md:w-[430px] lg:w-[500px]`}
-          >
-            {darkMode ? (
-              <img src="/images/Photo2_PortafolioDark.png" alt="" />
-            ) : (
-              <img src="/images/Photo2_Portafolio.png" alt="" />
-            )}
-          </div>
-        </div>
+        <div
+          className={`w-[80%] h-full sm:w-[40%] mt-[20px] md:mt-0 rounded-t-[15px] md:rounded-none [transition:1s] ${
+            darkMode ? "bg-[#cf9013]" : "bg-[#1e8bff]"
+          }`}
+        ></div>
       </div>
     </div>
   );

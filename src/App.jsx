@@ -50,8 +50,6 @@ function App() {
 
   const { i18n } = useTranslation();
 
-  console.log(cvLanguage);
-
   const {
     reset,
     handleSubmit,
@@ -123,7 +121,7 @@ function App() {
     setLoading(false);
   }, 1000);
 
-  localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  localStorage.setItem("darkMode", JSON.stringify(!darkMode));
 
   useEffect(() => {
     if (darkMode) {
