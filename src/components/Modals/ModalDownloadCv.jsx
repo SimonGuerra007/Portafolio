@@ -29,7 +29,7 @@ const ModalDownloadCv = ({
         <div className="flex justify-center items-center gap-[30px]">
           <a
             onClick={handleShowModalDownload}
-            href="/files/CV-SimonGuerra.pdf"
+            href="/files/CV_FULL-STACK_SIMON.pdf"
             download="CV Simon David Guerra Bedoya"
             className={`w-[100px] py-2 shadow-md rounded-[5px] text-center font-semibold transition-all bg-[#cf9013] hover:bg-[#ffb218] ${
               darkMode

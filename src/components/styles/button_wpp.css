@@ -8,10 +8,10 @@
     height: 90px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 200, 0, 0.8);
     border-radius: 100%;
     color: white;
-    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0.3em rgba(255, 200, 0, 0.5);
     font-weight: 700;
     cursor: pointer;
     position: fixed;
@@ -21,7 +21,7 @@
 }
 
 .frontSide::before {
-    background: linear-gradient(43deg, rgb(36, 162, 36) 0%, rgb(76, 191, 0) 46%, rgb(0, 175, 0) 100%);
+    background: linear-gradient(43deg, rgb(0, 142, 0) 0%, rgb(76, 191, 0) 46%, rgb(0, 142, 0) 100%);
 }
 
 .frontSide::before {
