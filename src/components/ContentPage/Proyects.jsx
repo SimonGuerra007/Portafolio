@@ -27,7 +27,7 @@ const Proyects = ({ darkMode }) => {
               <h3 className="font-semibold text-3xl text-white">Pokedex</h3>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-[10px] lg:gap-[30px]">
                 <a
-                  href="https://pokedex-simonguerra.netlify.app/pokedex"
+                  href="https://pokedex-007.netlify.app/pokedex"
                   target="blank"
                   className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
                     darkMode
@@ -48,7 +48,7 @@ const Proyects = ({ darkMode }) => {
               </h3>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-[10px] lg:gap-[30px]">
                 <a
-                  href="https://erp-ps-mauricio.web.app/"
+                  href="https://users-app-007.netlify.app/"
                   target="blank"
                   className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
                     darkMode
@@ -75,7 +75,7 @@ const Proyects = ({ darkMode }) => {
               </h3>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-[10px] lg:gap-[30px]">
                 <a
-                  href="https://rickandmorty-simonguerra.netlify.app/"
+                  href="https://rickandmorty-007.netlify.app/"
                   target="blank"
                   className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
                     darkMode
@@ -98,7 +98,7 @@ const Proyects = ({ darkMode }) => {
               <h3 className="text-white text-3xl font-semibold">Ecommerce</h3>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-[10px] lg:gap-[30px]">
                 <a
-                  href="https://ecommerce-simonguerra.netlify.app/"
+                  href="https://ecommerce-p-007.netlify.app/"
                   target="blank"
                   className={` rounded-[5px] py-[5px] px-[20px] transition-all font-semibold ${
                     darkMode

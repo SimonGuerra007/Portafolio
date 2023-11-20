@@ -30,6 +30,7 @@ import ModalSending from "./components/Modals/ModalSending";
 import SendingSuccess from "./components/Modals/SendingSuccess";
 import ModalDownloadCv from "./components/Modals/ModalDownloadCv";
 import ButtonWpp from "./components/Modals/ButtonWpp";
+import ButtonProbe from "./components/Modals/ButtonProbe";
 
 function App() {
   const getDarkModeStorage = JSON.parse(localStorage.getItem("darkMode"));
@@ -192,6 +193,7 @@ function App() {
       />
 
       <ButtonWpp />
+      <ButtonProbe />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
 
