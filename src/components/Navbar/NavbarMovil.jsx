@@ -107,22 +107,6 @@ const NavbarMovil = ({
               </Link>
               <Link
                 onClick={handleShowMain}
-                to="Skills"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-50}
-              >
-                <li
-                  className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                    darkMode ? "hover:bg-[#717171]" : "hover:bg-[#ffffff5f]"
-                  }`}
-                >
-                  {t("navbar.skills")}
-                </li>
-              </Link>
-              <Link
-                onClick={handleShowMain}
                 to="Proyects"
                 spy={true}
                 smooth={true}

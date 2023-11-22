@@ -54,21 +54,6 @@ const Navbar = ({
             </li>
           </Link>
           <Link
-            to="Skills"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-30}
-          >
-            <li
-              className={`cursor-pointer rounded-[4px] py-2 px-4 transition-all  ${
-                darkMode ? "hover:text-[#ffb92c]" : "hover:text-[#2819ff]"
-              }`}
-            >
-              {t("navbar.skills")}
-            </li>
-          </Link>
-          <Link
             to="Proyects"
             spy={true}
             smooth={true}

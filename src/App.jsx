@@ -204,9 +204,6 @@ function App() {
         <Element name="AboutMe">
           <AboutMe darkMode={darkMode} />
         </Element>
-        <Element name="Skills">
-          <Skills darkMode={darkMode} />
-        </Element>
         <Element name="Proyects">
           <Proyects darkMode={darkMode} />
         </Element>

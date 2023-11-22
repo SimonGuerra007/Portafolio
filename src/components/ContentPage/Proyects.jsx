@@ -44,7 +44,7 @@ const Proyects = ({ darkMode }) => {
           <div className="w-[230px] sm:w-[280px] lg:w-[350px] relative">
             <div className="hover:bg-black/80 rounded-[10px] absolute opacity-0 hover:opacity-[1] transition-all h-full w-full cursor-pointer flex flex-col justify-center items-center gap-4">
               <h3 className="text-white text-3xl font-semibold">
-                Proceso Seguro
+                User App
               </h3>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-[10px] lg:gap-[30px]">
                 <a
@@ -62,7 +62,7 @@ const Proyects = ({ darkMode }) => {
             </div>
             <img
               className="rounded-[10px]"
-              src="/images/ProcesoSeguro.png"
+              src="/images/userApp.png"
               alt=""
             />
           </div>
