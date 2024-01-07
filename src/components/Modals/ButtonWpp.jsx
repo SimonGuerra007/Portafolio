@@ -3,7 +3,7 @@ import React from "react";
 const ButtonWpp = () => {
 
   return (
-    <div class="flex justify-center items-center fixed top-[85%] left-[90%] z-[1000]">
+    <div class="flex justify-center items-center fixed top-[85%] left-[80%] sm:left-[85%] md:left-[90%] z-[1000]">
       <div class="relative inline-flex justify-center items-center">
         <div
           href="https://api.whatsapp.com/send/?phone=3052751143"
