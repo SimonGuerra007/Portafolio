@@ -11,7 +11,7 @@ const ButtonWpp = () => {
           class="w-[60px] h-[60px] relative cursor-pointer hover:scale-[0.8] transition-transform rounded-full z-10"
         >
           <a
-            href="https://api.whatsapp.com/send/?phone=3052751143"
+            href="https://api.whatsapp.com/send/?phone=3043391882"
             target="blank"
             className="absolute w-[100%] h-[100%]"
           ></a>
