@@ -184,13 +184,6 @@ function App() {
 
       <SendingSuccess sendingSuccess={sendingSuccess} darkMode={darkMode} />
 
-      <ModalDownloadCv
-        darkMode={darkMode}
-        modalDownload={modalDownload}
-        handleShowModalDownload={handleShowModalDownload}
-        cvLanguage={cvLanguage}
-      />
-
       <ButtonWpp />
 
       <LoadingLang loadingLang={loadingLang} darkMode={darkMode} />
