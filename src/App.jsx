@@ -153,25 +153,6 @@ function App() {
         handleShowModalDownload={handleShowModalDownload}
       />
 
-      <Contact
-        darkMode={darkMode}
-        handleShowModalGmail={handleShowModalGmail}
-        handleShowModalDownload={handleShowModalDownload}
-      />
-
-      <ModalFormGmail
-        darkMode={darkMode}
-        handleShowModalGmail={handleShowModalGmail}
-        showModalGmail={showModalGmail}
-        userFormGmail={userFormGmail}
-        setUserFormGmail={setUserFormGmail}
-        sendEmail={sendEmail}
-        handleSubmit={handleSubmit}
-        register={register}
-        errors={errors}
-        setShowModalSuccessEmail={setShowModalSuccessEmail}
-      />
-
       <ModalSuccessSend
         darkMode={darkMode}
         sendEmail={sendEmail}
